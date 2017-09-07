@@ -12,10 +12,25 @@ namespace yemnak.App_Start
 
             //--------------------------- Script Bundles ---------------------------
 
-            var jqueryBundle = new ScriptBundle("~/Contents/Scripts/jquery", "https://code.jquery.com/jquery-3.2.1.slim.min.js").Include(
-                "~/Contents/Scripts/jquery-{version}.js");
+            var jqueryBundle = new ScriptBundle("~/Contents/Scripts/jquery/jquery", "https://code.jquery.com/jquery-3.2.1.slim.min.js").Include(
+                "~/Contents/Scripts/jquery/jquery-{version}.js");
             jqueryBundle.CdnFallbackExpression = "window.jquery";
             bundles.Add(jqueryBundle);
+
+            var PopperJSBundle = new ScriptBundle("~/Contents/Scripts/popper/popper", "https://cdn.jsdelivr.net/npm/popper.js@1.12.5/dist/umd/popper.min.js").Include(
+                "~/Contents/Scripts/popper/popper.js");
+            PopperJSBundle.CdnFallbackExpression = "window.popper";
+            bundles.Add(PopperJSBundle);
+
+            var modernizrBundle = new ScriptBundle("~/Contents/Scripts/modernizr/modernizr", "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js").Include(
+                "~/Contents/Scripts/modernizr/modernizr-{version}.js");
+            modernizrBundle.CdnFallbackExpression = "window.modernizr";
+            bundles.Add(modernizrBundle);
+
+            var bootstrapBundle = new ScriptBundle("~/Contents/Scripts/bootstrap/bootstrap", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js").Include(
+                "~/Contents/Scripts/bootstrap/bootstrap.js");
+            bootstrapBundle.CdnFallbackExpression = "window.bootstrap";
+            bundles.Add(bootstrapBundle);
 
             //bundles.Add(new ScriptBundle("~/Scripts/bootstrap").Include(
             //    "~/Scripts/bootstrap.js")
@@ -25,28 +40,19 @@ namespace yemnak.App_Start
                 "~/Contents/Scripts/site.js")
             );
 
-            //bundles.Add(new ScriptBundle("~/Scripts/modernizr").Include(
-            //    "~/Scripts/modernizr-{version}.js")
-            //);
-
             //--------------------------- Style Bundles ---------------------------
 
-            //bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
-            //    "~/Content/bootstrap.css",
-            //    "~/Content/bootstrap-theme.css"));
+            bundles.Add(new StyleBundle("~/Contents/Stylesheets/bootstrap/bootstrap").Include(
+                "~/Contents/Stylesheets/bootstrap/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Contents/Stylesheets/LocalStyles").Include(
                 "~/Contents/Stylesheets/style.css"));
 
-            //bundles.Add(new StyleBundle("~/Contents/Stylesheets/FontAwesome").Include(
-            //    "~/Contents/Stylesheets/font-awesome.min.css"));
-            //, 
-            //    "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
-            //    .IncludeFallback("~/Contents/Stylesheets/font-awesome.min.css", "fa-2x", "font-size", "2em"));
+            bundles.Add(new StyleBundle("~/Contents/Stylesheets/FontAwesome").Include(
+                "~/Contents/Stylesheets/font-awesome.css"));
 
-            var animateStyleBundle = new StyleBundle("~/Content/Stylesheet/animate", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css").Include(
-                "~/Content/Stylesheet/animate.min.css");
-            bundles.Add(animateStyleBundle);
+            bundles.Add(new StyleBundle("~/Contents/Stylesheets/animate").Include(
+                "~/Contents/Stylesheets/animate.min.css"));
 
         }
     }
