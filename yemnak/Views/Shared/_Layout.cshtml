@@ -1,40 +1,45 @@
-﻿<!DOCTYPE html>
+﻿
+@using System.Web.Optimization;
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <meta name="description" content="PSC Website and Application for Yemnak">
+    <meta name="author" content="Shabbir-Salumberwala/Kamal-Ibrahim">
+    <meta name="generator" content="Visual Studio 2015" />
+    <meta name="application-name" content="PSC Yemnak website/App" />
+    <meta name="keywords" content="HTML5,CSS3,MVC-5,JavaScript,Jquery,Razor,bootstrap-4">
+
+    <title>@ViewBag.Title | Yemnak Concierge</title>
+
+    @Styles.Render("~/Contents/Stylesheets/bootstrap/bootstrap")
+
+    @Styles.Render("~/Contents/Stylesheets/FontAwesome")
+
+    @Styles.Render("~/Contents/Stylesheets/animate")
+
+    @Styles.Render("~/Contents/Stylesheets/LocalStyles")
+
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
-        </div>
-    </div>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    @RenderBody()
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    @Scripts.Render("~/Contents/Scripts/jquery/jquery")
+
+    @Scripts.Render("~/Contents/Scripts/popper/popper")
+
+    @Scripts.Render("~/Contents/Scripts/bootstrap/bootstrap")
+
+    @Scripts.Render("~/Contents/Scripts/modernizr/modernizr")
+
+    @Scripts.Render("~/Contents/Scripts/LocalScripts")
+
+    @RenderSection("JavaScript", required: false)
+
 </body>
 </html>
