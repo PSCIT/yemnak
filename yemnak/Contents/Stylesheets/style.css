@@ -26,30 +26,28 @@
 /*#region Top-Bar */
 
 .topbar {
-    height: 30px;
+    height: 1.875rem;
     background-color: #09213e;
-    color: #fff;
 }
 
     .topbar h6 {
-        padding-top: 6px;
+        padding-top: 0.375rem;
         font-weight: 400;
     }
 
 .social_icons a {
     display: inline-flex;
-    margin-left: 8px;
-    padding-top: 4px;
+    margin-left: 0.5rem;
+    padding-top: 0.25rem;
 }
 
     .social_icons a img {
         flex: 1;
-        height: 22px;
+        height: 1.375rem;
     }
 
 .language a {
     text-decoration: none;
-    color: #fff;
 }
 
     .language a:hover {
@@ -62,7 +60,7 @@
 /*#region Header */
 
 header {
-    padding-top: 40px;
+    padding-top: 2.5rem;
     background-image: url('../Images/header_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,7 +70,7 @@ header {
 /*#region Navigation */
 
 .logo {
-    height: 110px;
+    height: 6.875rem;
 }
 
 .navbar {
@@ -80,26 +78,22 @@ header {
 }
 
 .navbar-nav .active > .nav-link {
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
+    border-top: 0.0625rem solid #444;
+    border-bottom: 0.0625rem solid #444;
 }
 
 .nav-item:first-child {
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 
 .nav-item:last-child {
     background-color: #09213e;
-    padding-left: 20px;
-    padding-right: 10px;
+    padding-left: 1.25rem;
+    padding-right: 0.625rem;
 }
 
-    .nav-item:last-child .nav-link {
-        color: #fff;
-    }
-
 .navbar .nav-item {
-    padding-right: 20px;
+    padding-right: 1.25rem;
 }
 
     .navbar .nav-item .nav-link {
@@ -107,7 +101,7 @@ header {
     }
 
 nav ul {
-    padding-top: 47px;
+    padding-top: 2.938rem;
 }
 
     nav ul li a {
@@ -169,29 +163,29 @@ header hr {
 
 .about_us .our_vision h1 {
     font-weight: 300;
-    font-size: 80px;
+    font-size: 5rem;
 }
 
 .about_us .our_vision p {
     font-size: 1.625rem;
-    line-height: 50px;
+    line-height: 3.125rem;
 }
 
 .about_us .our_vision .eyes {
     width: 120%;
     position: relative;
-    left: -100px;
-    top: -50px;
+    left: -6.25rem;
+    top: -3.125rem;
 }
 
 .about_us .our_mission p {
     font-size: 1.625rem;
-    line-height: 50px;
+    line-height: 3.125rem;
 }
 
 .about_us .our_mission img {
     position: relative;
-    top: -32px;
+    top: -2rem;
 }
 
 /*#endregion */
@@ -207,24 +201,23 @@ header hr {
     .services h1 {
         font-weight: 700;
         font-size: 5.438rem;
-        color: #fff;
         margin-top: 4rem;
     }
 
     .services h2 {
         font-weight: 100;
         font-size: 3.125rem;
-        color: #fff;
     }
 
 .services_Section2 {
     background-color: #eaebed;
+    padding-bottom: 3.6875rem;
 }
 
     .services_Section2 p {
         margin-top: 2.0625rem;
         font-size: 2rem;
-        line-height: 50px;
+        line-height: 3.125rem;
     }
 
     .services_Section2 .membership_card h1 {
@@ -238,8 +231,46 @@ header hr {
         font-size: 2.0625rem;
     }
 
+    .services_Section2 .membership_card hr {
+        margin-top: 2.125rem;
+        margin-bottom: 2.9375rem;
+    }
+
 /*#endregion */
 
+/*#region Clients */
+
+.clients {
+    height: 15.81rem;
+}
+
+/*#endregion */
+
+/*#region Footer */
+
+footer {
+    height: 25rem;
+    background-image: url('../Images/footer_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+}
+
+    footer .about_us {
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.875rem;
+        margin-top: 1.9375rem;
+    }
+
+    footer .logo {
+        height: 9.25rem;
+    }
+
+/*#endregion */
+
+
+/*#region Media Queries From Xl-SM */
 
 /*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199px) {
@@ -256,3 +287,5 @@ header hr {
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575px) {
 }
+
+/*#endregion */

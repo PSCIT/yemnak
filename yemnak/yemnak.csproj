@@ -108,7 +108,9 @@
     <Content Include="Contents\fonts\fontawesome-webfont.svg" />
     <Content Include="Contents\Images\facebook_logo_white_x50.png" />
     <Content Include="Contents\Images\favicon.ico" />
+    <Content Include="Contents\Images\footer_background.png" />
     <Content Include="Contents\Images\header_background.jpg" />
+    <Content Include="Contents\Images\PSCLogo.svg" />
     <Content Include="Contents\Images\Services_Background.png" />
     <Content Include="Contents\Images\instagram_logo_white_x50.png" />
     <Content Include="Contents\Images\Mission.png" />
