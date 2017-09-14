@@ -1,4 +1,6 @@
 ﻿
+/*#region General-Declaration*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
 @font-face {
@@ -11,17 +13,27 @@
     src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Regular.ttf') format('truetype');
 }
 
-.fontArL {
-    font-family: 'Al-Jazeera-Arabic-Light';
+html {
+    overflow-x: hidden;
 }
 
 * {
     font-family: 'Roboto', sans-serif;
 }
 
+/*#endregion */
+
+/*#region Genric-Classes */
+
+.fontArL {
+    font-family: 'Al-Jazeera-Arabic-Light';
+}
+
 .Primary-Text-Color {
     color: #051f40;
 }
+
+/*#endregion */
 
 /*#region Top-Bar */
 
@@ -118,20 +130,20 @@ header hr {
 /*#region Header-Content */
 
 .header-content h2 {
-    font-size: 4.063rem;
+    font-size: 4.063rem; /*65px*/
     font-weight: 300;
-    margin-top: 3.0625rem;
+    margin-top: 3.0625rem; /*49px*/
 }
 
 .header-content h1 {
     font-weight: 700;
-    font-size: 5.313rem;
+    font-size: 5.313rem; /*85px*/
 }
 
 .header-content p {
     font-weight: 400;
-    font-size: 1.5625rem;
-    padding: 0 2.375rem;
+    font-size: 1.5625rem; /*25px*/
+    padding: 0 2.375rem; /*0 38px*/
 }
 
 .header-content .btn {
@@ -242,14 +254,20 @@ header hr {
 
 .clients {
     height: 15.81rem;
+    display: flex;
+    align-items: center;
 }
+
+    .clients .clientslick img {
+        height: 150px;
+    }
 
 /*#endregion */
 
 /*#region Footer */
 
 footer {
-    height: 25rem;
+    height: 28rem;
     background-image: url('../Images/footer_background.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -267,13 +285,79 @@ footer {
         height: 9.25rem;
     }
 
+    footer .contact_details .address h2, footer .contact_details .contact h2 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    footer .contact_details .address p, footer .contact_details .contact p {
+        font-size: 1.375rem;
+        font-weight: 300;
+    }
+
+    footer .contact_details .contact h2 {
+        margin-top: 1.75rem;
+    }
+
+    footer .contact_details .social {
+        margin-top: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+        footer .contact_details .social img {
+            height: 2.5rem;
+        }
+
+    footer .copyright {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
 /*#endregion */
+
+
+
 
 
 /*#region Media Queries From Xl-SM */
 
 /*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199px) {
+
+    /*#region Navigation */
+
+    nav ul li a {
+        font-size: 1.2570rem; /*25px*/
+    }
+
+    /*#endregion */
+
+    header hr {
+        margin-top: 1.2225rem;
+    }
+
+    /*#region Header-Content */
+
+    .header-content h2 {
+        font-size: 3.438rem;
+    }
+
+    .header-content h1 {
+        font-size: 4.688rem;
+    }
+
+    .header-content p {
+        font-size: 1.5625rem;
+        padding: 0 2.375rem;
+    }
+
+    .header-content .btn {
+        font-size: 1.875rem;
+        background-color: #3a4a63;
+        font-weight: 400;
+    }
+
+    /*#endregion */
 }
 
 /*Medium devices (tablets, less than 992px)*/

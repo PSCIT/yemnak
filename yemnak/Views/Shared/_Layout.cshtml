@@ -17,6 +17,11 @@
 
     @Styles.Render("~/Contents/Stylesheets/bootstrap/bootstrap")
 
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+
     @Styles.Render("~/Contents/Stylesheets/FontAwesome")
 
     @Styles.Render("~/Contents/Stylesheets/animate")
@@ -49,11 +54,11 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-xl-2">
+                <div class="col-xl-2 col-lg-2">
                     <img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" />
                 </div>
 
-                <div class="col-xl-10">
+                <div class="col-xl-10 col-lg-10">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         @*<a class="navbar-brand" href="#">Navbar</a>*@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,6 +110,56 @@
 
     @RenderBody()
 
+    <!-- #region Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="row">
+                        <div class="col-lg-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" /></div>
+                        <div class="col-lg-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/PSCLogo.svg" /></div>
+                    </div>
+                    <p class="text-justify text-light about_us">
+                        YEMNAK is one of the services provided by Public Services Company. The service has been
+                        launched since 2003 and one of our first and current main clients are the General
+                        Secretariat of the Council of Ministers.
+                    </p>
+                </div>
+                <div class="col-xl-1">
+                    <hr width="1" style="background-color:#fff;height: 95%;" />
+                </div>
+                <div class="col-xl-7 text-light">
+                    <div class="contact_details">
+                        <div class="address">
+                            <h2>Address</h2>
+                            <p>Ministry Zone, Al-Shuhadaa Governance Area,  Beside NBK Bank Building, South Surra</p>
+                        </div>
+
+                        <div class="contact">
+                            <h2>Contact</h2>
+                            <p>1824824  |  info@yemnak.com</p>
+                        </div>
+
+                        <div class="social">
+                            <img class="img-fluid" src="~/Contents/Images/facebook-fb-icon.svg" />
+                            <img class="img-fluid" src="~/Contents/Images/twitter-icon.png" />
+                            <img class="img-fluid" src="~/Contents/Images/googleplus-icon.png" />
+                            <img class="img-fluid" src="~/Contents/Images/instagram-icon.png" />
+                        </div>
+
+                    </div>
+
+                    <div class="copyright">
+                        <p>
+                            Copyright © 2017 All rights reserved Public Service Company Kuwait
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- #endregion -->
+
     @Scripts.Render("~/Contents/Scripts/jquery/jquery")
 
     @Scripts.Render("~/Contents/Scripts/popper/popper")
@@ -112,6 +167,8 @@
     @Scripts.Render("~/Contents/Scripts/bootstrap/bootstrap")
 
     @Scripts.Render("~/Contents/Scripts/modernizr/modernizr")
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
 
     @Scripts.Render("~/Contents/Scripts/LocalScripts")
 
