@@ -70,11 +70,11 @@
                                 <li class="nav-item active">
                                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/home#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/home#services">Services</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Clients</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/home#clients">Clients</a></li>
                                 <li class="nav-item"><a class="nav-link text-light" href="#">Membership Request</a></li>
                             </ul>
                         </div>
@@ -171,6 +171,18 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
 
     @Scripts.Render("~/Contents/Scripts/LocalScripts")
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script src="http://ataredo.com/external/code/lucid.js"></script>
+
+    <script>
+        $(window).on('load', function () {
+
+            $(this).impulse();
+        });
+    </script>
 
     @RenderSection("JavaScript", required: false)
 

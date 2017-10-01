@@ -187,6 +187,7 @@
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap-reboot.min.css.map" />
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap.css.map" />
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap.min.css.map" />
+    <None Include="Properties\PublishProfiles\yemnak.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
