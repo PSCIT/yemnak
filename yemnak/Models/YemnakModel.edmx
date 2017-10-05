@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="YemnakDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ChildrenTb">
+          <Key>
+            <PropertyRef Name="ChildId" />
+          </Key>
+          <Property Name="ChildId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentCardID" Type="int" Nullable="false" />
+          <Property Name="ChildName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChildCivilId" Type="nvarchar(max)" />
+          <Property Name="ChildBOD" Type="date" />
+          <Property Name="IsDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ClassicTb">
+          <Key>
+            <PropertyRef Name="CardId" />
+          </Key>
+          <Property Name="CardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HolderName" Type="nvarchar(max)" />
+          <Property Name="HolderPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="HolderEmail" Type="varchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="CivilId" Type="nvarchar(max)" />
+          <Property Name="BOD" Type="date" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="OrderTb">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardId" Type="int" />
+          <Property Name="CardName" Type="nvarchar(max)" />
+          <Property Name="CardPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="CivilID" Type="nvarchar(max)" />
+          <Property Name="Succeded" Type="bit" />
+          <Property Name="Pending" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="OrderDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PartnerTb">
+          <Key>
+            <PropertyRef Name="PartnerID" />
+          </Key>
+          <Property Name="PartnerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CrdHolderID" Type="int" />
+          <Property Name="PartnerName" Type="nvarchar(max)" />
+          <Property Name="PartnerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerEmail" Type="nvarchar(max)" />
+          <Property Name="PartnerAddress" Type="nvarchar(max)" />
+          <Property Name="PartnerCivilId" Type="nvarchar(max)" />
+          <Property Name="PartnerBOD" Type="date" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="PlatinumTb">
+          <Key>
+            <PropertyRef Name="CardId" />
+          </Key>
+          <Property Name="CardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HolderName" Type="nvarchar(max)" />
+          <Property Name="HolderPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="HolderEmail" Type="varchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="CivilId" Type="nvarchar(max)" />
+          <Property Name="BOD" Type="date" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="HolderGender" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerName" Type="nvarchar(max)" />
+          <Property Name="PartnerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerEmail" Type="varchar(max)" />
+          <Property Name="PartnerCivilID" Type="nvarchar(max)" />
+          <Property Name="PartnerBOD" Type="date" />
+        </EntityType>
+        <EntityType Name="PremierTb">
+          <Key>
+            <PropertyRef Name="CardId" />
+          </Key>
+          <Property Name="CardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HolderName" Type="nvarchar(max)" />
+          <Property Name="HolderPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="HolderEmail" Type="varchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="CivilId" Type="nvarchar(max)" />
+          <Property Name="BOD" Type="date" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="PrestigeTb">
+          <Key>
+            <PropertyRef Name="CardId" />
+          </Key>
+          <Property Name="CardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HolderName" Type="nvarchar(max)" />
+          <Property Name="HolderPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="HolderEmail" Type="varchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="CivilId" Type="nvarchar(max)" />
+          <Property Name="BOD" Type="date" />
+          <Property Name="IsValid" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="HolderGender" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerName" Type="nvarchar(max)" />
+          <Property Name="PartnerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartnerEmail" Type="varchar(max)" />
+          <Property Name="PartnerCivilID" Type="nvarchar(max)" />
+          <Property Name="PartnerBOD" Type="date" />
+        </EntityType>
+        <EntityType Name="UsersTb">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" />
+          <Property Name="userPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="IsAdmin" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="YemnakDBModelStoreContainer">
+          <EntitySet Name="ChildrenTb" EntityType="Self.ChildrenTb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClassicTb" EntityType="Self.ClassicTb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderTb" EntityType="Self.OrderTb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PartnerTb" EntityType="Self.PartnerTb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlatinumTb" EntityType="Self.PlatinumTb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PremierTb" EntityType="Self.PremierTb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrestigeTb" EntityType="Self.PrestigeTb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsersTb" EntityType="Self.UsersTb" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YemnakDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ChildrenTb">
+          <Key>
+            <PropertyRef Name="ChildId" />
+          </Key>
+          <Property Name="ChildId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentCardID" Type="Int32" Nullable="false" />
+          <Property Name="ChildName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChildCivilId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChildBOD" Type="DateTime" Precision="0" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ClassicTb">
+          <Key>
+            <PropertyRef Name="CardId" />
+          </Key>
+          <Property Name="CardId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HolderName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HolderPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HolderEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CivilId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOD" Type="DateTime" Precision="0" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="OrderTb">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CardId" Type="Int32" />
+          <Property Name="CardName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CardPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CivilID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Succeded" Type="Boolean" />
+          <Property Name="Pending" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="OrderDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PartnerTb">
+          <Key>
+            <PropertyRef Name="PartnerID" />
+          </Key>
+          <Property Name="PartnerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CrdHolderID" Type="Int32" />
+          <Property Name="PartnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerCivilId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerBOD" Type="DateTime" Precision="0" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="PlatinumTb">
+          <Key>
+            <PropertyRef Name="CardId" />
+          </Key>
+          <Property Name="CardId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HolderName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HolderPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HolderEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CivilId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOD" Type="DateTime" Precision="0" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="HolderGender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PartnerCivilID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerBOD" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="PremierTb">
+          <Key>
+            <PropertyRef Name="CardId" />
+          </Key>
+          <Property Name="CardId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HolderName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HolderPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HolderEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CivilId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOD" Type="DateTime" Precision="0" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="PrestigeTb">
+          <Key>
+            <PropertyRef Name="CardId" />
+          </Key>
+          <Property Name="CardId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HolderName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HolderPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HolderEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CivilId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOD" Type="DateTime" Precision="0" />
+          <Property Name="IsValid" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="HolderGender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PartnerCivilID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerBOD" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="UsersTb">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="IsAdmin" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="YemnakDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ChildrenTbs" EntityType="Self.ChildrenTb" />
+          <EntitySet Name="ClassicTbs" EntityType="Self.ClassicTb" />
+          <EntitySet Name="OrderTbs" EntityType="Self.OrderTb" />
+          <EntitySet Name="PartnerTbs" EntityType="Self.PartnerTb" />
+          <EntitySet Name="PlatinumTbs" EntityType="Self.PlatinumTb" />
+          <EntitySet Name="PremierTbs" EntityType="Self.PremierTb" />
+          <EntitySet Name="PrestigeTbs" EntityType="Self.PrestigeTb" />
+          <EntitySet Name="UsersTbs" EntityType="Self.UsersTb" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YemnakDBModelStoreContainer" CdmEntityContainer="YemnakDBEntities">
+          <EntitySetMapping Name="ChildrenTbs">
+            <EntityTypeMapping TypeName="YemnakDBModel.ChildrenTb">
+              <MappingFragment StoreEntitySet="ChildrenTb">
+                <ScalarProperty Name="ChildId" ColumnName="ChildId" />
+                <ScalarProperty Name="ParentCardID" ColumnName="ParentCardID" />
+                <ScalarProperty Name="ChildName" ColumnName="ChildName" />
+                <ScalarProperty Name="ChildCivilId" ColumnName="ChildCivilId" />
+                <ScalarProperty Name="ChildBOD" ColumnName="ChildBOD" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClassicTbs">
+            <EntityTypeMapping TypeName="YemnakDBModel.ClassicTb">
+              <MappingFragment StoreEntitySet="ClassicTb">
+                <ScalarProperty Name="CardId" ColumnName="CardId" />
+                <ScalarProperty Name="HolderName" ColumnName="HolderName" />
+                <ScalarProperty Name="HolderPhone" ColumnName="HolderPhone" />
+                <ScalarProperty Name="HolderEmail" ColumnName="HolderEmail" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CivilId" ColumnName="CivilId" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderTbs">
+            <EntityTypeMapping TypeName="YemnakDBModel.OrderTb">
+              <MappingFragment StoreEntitySet="OrderTb">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="OrderTitle" ColumnName="OrderTitle" />
+                <ScalarProperty Name="CardId" ColumnName="CardId" />
+                <ScalarProperty Name="CardName" ColumnName="CardName" />
+                <ScalarProperty Name="CardPhone" ColumnName="CardPhone" />
+                <ScalarProperty Name="CivilID" ColumnName="CivilID" />
+                <ScalarProperty Name="Succeded" ColumnName="Succeded" />
+                <ScalarProperty Name="Pending" ColumnName="Pending" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PartnerTbs">
+            <EntityTypeMapping TypeName="YemnakDBModel.PartnerTb">
+              <MappingFragment StoreEntitySet="PartnerTb">
+                <ScalarProperty Name="PartnerID" ColumnName="PartnerID" />
+                <ScalarProperty Name="CrdHolderID" ColumnName="CrdHolderID" />
+                <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+                <ScalarProperty Name="PartnerPhone" ColumnName="PartnerPhone" />
+                <ScalarProperty Name="PartnerEmail" ColumnName="PartnerEmail" />
+                <ScalarProperty Name="PartnerAddress" ColumnName="PartnerAddress" />
+                <ScalarProperty Name="PartnerCivilId" ColumnName="PartnerCivilId" />
+                <ScalarProperty Name="PartnerBOD" ColumnName="PartnerBOD" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlatinumTbs">
+            <EntityTypeMapping TypeName="YemnakDBModel.PlatinumTb">
+              <MappingFragment StoreEntitySet="PlatinumTb">
+                <ScalarProperty Name="CardId" ColumnName="CardId" />
+                <ScalarProperty Name="HolderName" ColumnName="HolderName" />
+                <ScalarProperty Name="HolderPhone" ColumnName="HolderPhone" />
+                <ScalarProperty Name="HolderEmail" ColumnName="HolderEmail" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CivilId" ColumnName="CivilId" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="HolderGender" ColumnName="HolderGender" />
+                <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+                <ScalarProperty Name="PartnerPhone" ColumnName="PartnerPhone" />
+                <ScalarProperty Name="PartnerEmail" ColumnName="PartnerEmail" />
+                <ScalarProperty Name="PartnerCivilID" ColumnName="PartnerCivilID" />
+                <ScalarProperty Name="PartnerBOD" ColumnName="PartnerBOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PremierTbs">
+            <EntityTypeMapping TypeName="YemnakDBModel.PremierTb">
+              <MappingFragment StoreEntitySet="PremierTb">
+                <ScalarProperty Name="CardId" ColumnName="CardId" />
+                <ScalarProperty Name="HolderName" ColumnName="HolderName" />
+                <ScalarProperty Name="HolderPhone" ColumnName="HolderPhone" />
+                <ScalarProperty Name="HolderEmail" ColumnName="HolderEmail" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CivilId" ColumnName="CivilId" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrestigeTbs">
+            <EntityTypeMapping TypeName="YemnakDBModel.PrestigeTb">
+              <MappingFragment StoreEntitySet="PrestigeTb">
+                <ScalarProperty Name="CardId" ColumnName="CardId" />
+                <ScalarProperty Name="HolderName" ColumnName="HolderName" />
+                <ScalarProperty Name="HolderPhone" ColumnName="HolderPhone" />
+                <ScalarProperty Name="HolderEmail" ColumnName="HolderEmail" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CivilId" ColumnName="CivilId" />
+                <ScalarProperty Name="BOD" ColumnName="BOD" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="HolderGender" ColumnName="HolderGender" />
+                <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+                <ScalarProperty Name="PartnerPhone" ColumnName="PartnerPhone" />
+                <ScalarProperty Name="PartnerEmail" ColumnName="PartnerEmail" />
+                <ScalarProperty Name="PartnerCivilID" ColumnName="PartnerCivilID" />
+                <ScalarProperty Name="PartnerBOD" ColumnName="PartnerBOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersTbs">
+            <EntityTypeMapping TypeName="YemnakDBModel.UsersTb">
+              <MappingFragment StoreEntitySet="UsersTb">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
