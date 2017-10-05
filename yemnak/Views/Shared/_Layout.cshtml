@@ -1,8 +1,22 @@
 ﻿
 @using System.Web.Optimization;
+@using System.Globalization;
+
+@if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+{
+    ViewBag.dir = "rtl"; ViewBag.rtl = true;
+}
+
+else
+{
+    ViewBag.dir = "ltr"; ViewBag.rtl = false;
+}
 
 <!DOCTYPE html>
-<html>
+<html lang="@CultureInfo.CurrentCulture.Name" dir=@ViewBag.dir>
+@{
+    Session["lang"] = CultureInfo.CurrentCulture.Name;
+}
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,28 +42,30 @@
 
     @Styles.Render("~/Contents/Stylesheets/LocalStyles")
 
+    @Styles.Render("~/Contents/Stylesheets/style" + (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft ? "-rtl":"") + ".css");
+
 
 </head>
 <body>
     <div class="topbar text-light">
         <div class="container">
             <div class="row">
-                <div class="col-xl-2 col-lg-2 col-md-3 img-flag">
+                <div class="col-lg-2 col-sm-3 col-3 img-flag">
                     <img class="img-fluid" src="~/Contents/Images/Flag_of_Kuwait.svg" />
                     <img class="img-fluid" src="~/Contents/Images/Flag_of_the_United_Kingdom.svg" />
                     <img class="img-fluid" src="~/Contents/Images/Flag_of_the_United_Arab_Emirates.svg" />
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-2 social_icons">
+                <div class="col-md-2 d-md-block d-none social_icons">
                     <a href="#"><img src="~/Contents/Images/facebook_logo_white_x50.png" alt="Facebook Yemnak" /></a>
                     <a href="#"><img src="~/Contents/Images/Twitter_logo_white_x50.png" /></a>
                     <a href="#"><img src="~/Contents/Images/instagram_logo_white_x50.png" /></a>
                 </div>
 
-                <div class="col-xl-4 col-lg-4 col-md-5">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-6">
                     <h6>Contact : 1824824  |  info@yemnak.com</h6>
                 </div>
 
-                <div class="ml-auto language">
+                <div class="ml-sm-auto ml-2 language">
                     <a class="text-light" href="#">English</a> | <a class="fontArL languageAr text-light" href="#">العربي</a>
                 </div>
             </div>
@@ -59,11 +75,11 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-xl-2 col-lg-2 order-lg-1 col-md-3 order-md-2">
+                <div class="col-lg-2 order-lg-1 col-md-3 col-4 order-2">
                     <img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" />
                 </div>
 
-                <div class="col-xl-10 col-lg-10 order-lg-2 col-md-9 order-md-1 navbar-Parent">
+                <div class="col-lg-10 order-lg-2 col-md-9 col-7 order-1 ml-auto navbar-Parent">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         @*<a class="navbar-brand" href="#">Navbar</a>*@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +107,7 @@
 
             <div class="header-content">
                 <div class="row">
-                    <div class="col-xl-12 col-md-12">
+                    <div class="col-12">
                         <h2 class="text-center">DIVERSIFIED SERVICES</h2>
                         <h1 class="text-center">UNVARYING QUALITY</h1>
                         <p class="text-center">
@@ -102,7 +118,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-xl-4 col-lg-4 col-md-4">
+                    <div class="col-md-4 col-5">
                         <a href="#" class="btn btn-block btn-dark">Learn More</a>
                     </div>
                 </div>
@@ -119,10 +135,10 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-lg-4">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-8 mx-auto">
                     <div class="row">
-                        <div class="col-lg-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" /></div>
-                        <div class="col-lg-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/PSCLogo.svg" /></div>
+                        <div class="col-md-6 col-sm-6 col-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" /></div>
+                        <div class="col-md-6 col-sm-6 col-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/PSCLogo.svg" /></div>
                     </div>
                     <p class="text-justify text-light about_us">
                         YEMNAK is one of the services provided by Public Services Company. The service has been
@@ -130,10 +146,11 @@
                         Secretariat of the Council of Ministers.
                     </p>
                 </div>
-                <div class="col-xl-1 col-lg-1">
-                    <hr width="1" style="background-color:#fff;height: 95%;" />
+                <div class="col-md-1 col-sm-1">
+                    <hr class="d-none d-sm-block" width="1" style="background-color:#fff;height: 95%;" />
+                    <hr class="d-block d-sm-none" style="background-color:#fff; width:85%" />
                 </div>
-                <div class="col-xl-7 col-lg-7 text-light">
+                <div class="col-lg-7 col-md-6 col-sm-5 col-8 mx-auto text-light">
                     <div class="contact_details">
                         <div class="address">
                             <h2>Address</h2>
@@ -178,16 +195,16 @@
     @Scripts.Render("~/Contents/Scripts/LocalScripts")
 
     @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-    <script src="http://ataredo.com/external/code/lucid.js"></script>
+        <script src="http://ataredo.com/external/code/lucid.js"></script>
 
-    <script>
-        $(window).on('load', function () {
+        <script>
+            $(window).on('load', function () {
 
-            $(this).impulse();
-        });
-    </script>*@
+                $(this).impulse();
+            });
+        </script>*@
 
     @RenderSection("JavaScript", required: false)
 
