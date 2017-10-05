@@ -356,7 +356,6 @@ footer {
 
 /*#endregion */
 
-
 /*#region Media Queries From Xl-SM */
 
 /*Large devices (desktops, less than 1200px)*/
@@ -880,12 +879,7 @@ footer {
     /*#endregion */
 }
 
-
-
-
-
-
-
+/* Other Media Queries to Fix*/
 @media (max-width: 535px) {
 
     .img-flag img {
