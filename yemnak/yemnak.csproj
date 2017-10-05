@@ -158,8 +158,8 @@
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap.min.css" />
     <Content Include="Contents\Stylesheets\font-awesome.css" />
     <Content Include="Contents\Stylesheets\font-awesome.min.css" />
+    <Content Include="Contents\Stylesheets\style-rtl.css" />
     <Content Include="Contents\Stylesheets\style.css" />
-    <Content Include="Contents\Stylesheets\style_ar.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Contents\fonts\fontawesome-webfont.eot" />
@@ -270,6 +270,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_GlobalResources\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
