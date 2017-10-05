@@ -111,6 +111,9 @@
     <Content Include="Contents\Images\facebook-fb-icon.svg" />
     <Content Include="Contents\Images\facebook_logo_white_x50.png" />
     <Content Include="Contents\Images\favicon.ico" />
+    <Content Include="Contents\Images\Flag_of_Kuwait.svg" />
+    <Content Include="Contents\Images\Flag_of_the_United_Arab_Emirates.svg" />
+    <Content Include="Contents\Images\Flag_of_the_United_Kingdom.svg" />
     <Content Include="Contents\Images\footer_background.png" />
     <Content Include="Contents\Images\googleplus-icon.png" />
     <Content Include="Contents\Images\header_background.jpg" />
@@ -122,6 +125,7 @@
     <Content Include="Contents\Images\Mission.png" />
     <Content Include="Contents\Images\pexels-eyes-photo.png" />
     <Content Include="Contents\Images\Service_Yemnak.png" />
+    <Content Include="Contents\Images\snapchat-icon.png" />
     <Content Include="Contents\Images\twitter-icon.png" />
     <Content Include="Contents\Images\Twitter_logo_white_x50.png" />
     <Content Include="Contents\Images\Viva.png" />
@@ -188,6 +192,7 @@
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap.css.map" />
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap.min.css.map" />
     <None Include="Properties\PublishProfiles\yemnak.pubxml" />
+    <None Include="Properties\PublishProfiles\yemnakProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

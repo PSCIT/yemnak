@@ -34,13 +34,18 @@
     <div class="topbar text-light">
         <div class="container">
             <div class="row">
-                <div class="col-xl-2 col-lg-2 social_icons">
+                <div class="col-xl-2 col-lg-2 col-md-3 img-flag">
+                    <img class="img-fluid" src="~/Contents/Images/Flag_of_Kuwait.svg" />
+                    <img class="img-fluid" src="~/Contents/Images/Flag_of_the_United_Kingdom.svg" />
+                    <img class="img-fluid" src="~/Contents/Images/Flag_of_the_United_Arab_Emirates.svg" />
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 social_icons">
                     <a href="#"><img src="~/Contents/Images/facebook_logo_white_x50.png" alt="Facebook Yemnak" /></a>
                     <a href="#"><img src="~/Contents/Images/Twitter_logo_white_x50.png" /></a>
                     <a href="#"><img src="~/Contents/Images/instagram_logo_white_x50.png" /></a>
                 </div>
 
-                <div class="col-xl-4 col-lg-4">
+                <div class="col-xl-4 col-lg-4 col-md-5">
                     <h6>Contact : 1824824  |  info@yemnak.com</h6>
                 </div>
 
@@ -54,11 +59,11 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-xl-2 col-lg-2">
+                <div class="col-xl-2 col-lg-2 order-lg-1 col-md-3 order-md-2">
                     <img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" />
                 </div>
 
-                <div class="col-xl-10 col-lg-10">
+                <div class="col-xl-10 col-lg-10 order-lg-2 col-md-9 order-md-1 navbar-Parent">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         @*<a class="navbar-brand" href="#">Navbar</a>*@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +73,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="/home#about">About</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/home#services">Services</a></li>
@@ -86,7 +91,7 @@
 
             <div class="header-content">
                 <div class="row">
-                    <div class="col-xl-12">
+                    <div class="col-xl-12 col-md-12">
                         <h2 class="text-center">DIVERSIFIED SERVICES</h2>
                         <h1 class="text-center">UNVARYING QUALITY</h1>
                         <p class="text-center">
@@ -97,7 +102,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-xl-4">
+                    <div class="col-xl-4 col-lg-4 col-md-4">
                         <a href="#" class="btn btn-block btn-dark">Learn More</a>
                     </div>
                 </div>
@@ -114,7 +119,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-4">
                     <div class="row">
                         <div class="col-lg-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" /></div>
                         <div class="col-lg-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/PSCLogo.svg" /></div>
@@ -125,10 +130,10 @@
                         Secretariat of the Council of Ministers.
                     </p>
                 </div>
-                <div class="col-xl-1">
+                <div class="col-xl-1 col-lg-1">
                     <hr width="1" style="background-color:#fff;height: 95%;" />
                 </div>
-                <div class="col-xl-7 text-light">
+                <div class="col-xl-7 col-lg-7 text-light">
                     <div class="contact_details">
                         <div class="address">
                             <h2>Address</h2>
@@ -141,10 +146,10 @@
                         </div>
 
                         <div class="social">
-                            <img class="img-fluid" src="~/Contents/Images/facebook-fb-icon.svg" />
-                            <img class="img-fluid" src="~/Contents/Images/twitter-icon.png" />
-                            <img class="img-fluid" src="~/Contents/Images/googleplus-icon.png" />
-                            <img class="img-fluid" src="~/Contents/Images/instagram-icon.png" />
+                            <a href="#"> <img class="img-fluid" src="~/Contents/Images/facebook-fb-icon.svg" /></a>
+                            <a href="#"><img class="img-fluid" src="~/Contents/Images/twitter-icon.png" /></a>
+                            <a href="#"><img class="img-fluid" src="~/Contents/Images/snapchat-icon.png" /></a>
+                            <a href="#"><img class="img-fluid" src="~/Contents/Images/instagram-icon.png" /></a>
                         </div>
 
                     </div>
@@ -172,7 +177,7 @@
 
     @Scripts.Render("~/Contents/Scripts/LocalScripts")
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
     <script src="http://ataredo.com/external/code/lucid.js"></script>
@@ -182,7 +187,7 @@
 
             $(this).impulse();
         });
-    </script>
+    </script>*@
 
     @RenderSection("JavaScript", required: false)
 
