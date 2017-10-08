@@ -10,7 +10,7 @@ namespace yemnak.Controllers
         private void languageSwitch(string language)
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             if(language == "ar-KW")
             {
                 ViewBag.language = "ar-KW";
@@ -21,6 +21,12 @@ namespace yemnak.Controllers
             }
         }
         public ActionResult Index(string language)
+        {
+            languageSwitch(language);
+            return View();
+        }
+
+        public ActionResult ContactUs(string language)
         {
             languageSwitch(language);
             return View();
