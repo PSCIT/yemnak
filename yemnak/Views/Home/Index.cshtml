@@ -1,4 +1,6 @@
 
+@using yemnak.App_GlobalResources;
+@using System.Globalization;
 @{
     ViewBag.Title = "Offical Website";
 }
@@ -10,29 +12,24 @@
         <div class="row">
             <div class="col-sm-12 col-11 ml-4">
                 <div class="title">
-                    <h1 class="text-center">About Yemnak</h1>
-                    <h2 class="text-center">Bringing Services to you since 2003</h2>
+                    <h1 class="text-center">@SiteResources.About_Yemnak_Title</h1>
+                    <h2 class="text-center">@SiteResources.About_Yemnak_Subtitle</h2>
                 </div>
                 <hr />
                 <div class="description">
                     <p class="text-center">
-                        From the goals that the Public Services Company were built for, which is to help citizens from all over the state private and
-                        public institutions to facilitate procedures, and from the company's vision which is to present superior services,
-                        Yemnak Concierge was built, since 2003. Yemnak is a service given for our elite clients, individuals and companies,
-                        to help out with your needs and to help you with your daily tasks in privacy. Yemnak team will satisfy your needs where they
-                        will take you to a luxurious trip of your life. Our team are ready to serve you 24/7 through our branches, in Kuwait or even
-                        Dubai and London.
+                        @SiteResources.About_Yemnak_Para
                     </p>
                 </div>
             </div>
         </div>
-        
+
         <div class="our_vision">
             <div class="row">
                 <div class="col-lg-7 col-12">
-                    <h1 class="text-center">OUR VISION</h1>
+                    <h1 class="text-center">@SiteResources.Our_Vision_Title</h1>
                     <p class="text-center">
-                        In Yemnak we believe that you deserve a Luxury Lifestyle, so our vision is to take the lead in Concierge Services worldwide.
+                        @SiteResources.Our_Vision_Detail
                     </p>
                 </div>
                 <div class="col-lg-5 col-md-10 mx-md-auto col-12">
@@ -45,12 +42,19 @@
             <div class="row">
                 <div class="col-md-9 ml-md-auto col-8 ml-2">
                     <p class="text-center">
-                        Provide all the possibilities that we can offer in Concierge Services, to provide the best services to our clients.
+                        @SiteResources.Our_Mission_Detail
                     </p>
                 </div>
 
                 <div class="col-3">
-                    <img class="img-fluid" src="~/Contents/Images/Mission.png" />
+                    @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                    {
+                        <img class="img-fluid" src="~/Contents/Images/Mission_ar.png" />
+                    }
+                    else
+                    {
+                        <img class="img-fluid" src="~/Contents/Images/Mission.png" />
+                    }
                 </div>
 
             </div>
@@ -68,8 +72,8 @@
                 <img class="img-fluid Yemnak_Service_Image" src="~/Contents/Images/Service_Yemnak.png" />
             </div>
             <div class="col-lg-5 col-md-6 col-sm-5 col-4 text-light">
-                <h1 class="text-right">Unmatched Services</h1>
-                <h2 class="text-right">adapted to your needs</h2>
+                <h1 class="text-right">@SiteResources.Services_Title</h1>
+                <h2 class="text-right">@SiteResources.Services_Subtitle</h2>
             </div>
         </div>
     </div>
@@ -81,66 +85,62 @@
             <div class="col-lg-6 col-md-12 col-11 mx-auto">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title text-center">Concierge Individuals and Company</h3>
+                        <h3 class="card-title text-center">@SiteResources.Card_Title_First</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-text text-justify">
-                            Yemnak's team are ready to serve you 24/7 to facilitate your daily tasks, to create a unique and luxurious
-                            lifestyle to our clients. These services provided to our clients through annual contracts with different companies
-                            for their clients, or by individual's membership contracts. We designed our services to suit your needs and wants
-                            which will help you through your day.
+                            @SiteResources.Card_Title_First_Detail
                         </p>
-                        
+
                     </div>
                     <div class="card-footer">
                         <ul>
-                            <li>Completing transactions, which does not require a personal attendance.</li>
-                            <li>Establishing / renew / cancel an immigrants visa.</li>
-                            <li>Comprehensive medical examination.</li>
-                            <li>Transporting data from passport to another.</li>
-                            <li>Driving license renewal.</li>
-                            <li>Technical inspection for cars and car registration renewal.</li>
-                            <li>Visa for tourism or for students.</li>
-                            <li>Civil ID renewal</li>
-                            <li>Finishing transactions through different embassies and Ministry of Foreign Affairs.</li>
-                            <li>Transportations from / to airports.</li>
-                            <li>Booking hotels, tickets, restaurants, etc.</li>
-                            <li>On road services.</li>
-                            <li>Paying fees (schools, bills, electricity, traffic violations, etc.).</li>
-                            <li>Delivery services (flowers, gifts, invitations, etc.).</li>
-                            <li>All kind of services that needed by our clients that suits our policies and Shariaa'.</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_1</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_2</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_3</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_4</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_5</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_6</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_7</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_8</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_9</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_10</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_11</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_12</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_13</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_14</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_15</li>
+                            <li>@SiteResources.Card_Title_First_LIstitem_16</li>
                         </ul>
                     </div>
                 </div>
-            </div>            
+            </div>
             <div class="col-lg-6 col-md-12 col-11 mx-auto">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title text-center">Call Center</h3>
+                        <h3 class="card-title text-center">@SiteResources.Card_Title_Second</h3>
                     </div>
                     <div class="card-body">
                         <p class="card-text text-justify">
-                            To keep up with our client's needs we provided a call center to help for establishing high standards for our services.
-                            We provide this a Call Center Services to companies with employees who are ready to answer calls for them. In addition,
-                            there is a call center in our company with the latest technology to serve different companies and governments.
-                            
+                            @SiteResources.Card_Title_Second_Detail
+
                         </p>
-                        
+
                     </div>
                     <div class="card-footer">
-                        <h5>Call Center also provide different services:</h5>
-                            <br />
+                        <h5>@SiteResources.Card_Title_Second_Detail2</h5>
+                        <br />
                         <ul>
-                            <li>Incoming and outgoing calls services.</li>
-                            <li>Marketing campaigns.</li>
-                            <li>Survey campaigns.</li>
-                            <li>Guidance and awareness campaigns.</li>
-                            <li>Text messaging services.</li>
-                            <li>Email messaging services.</li>
-                            <li>Advertising services.</li>
-                            <li>Fellow-up services.</li>
-                            <li>Consulting and training services.</li>
-                            <li>Data entering services.</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_1</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_2</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_3</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_4</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_5</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_6</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_7</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_8</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_9</li>
+                            <li>@SiteResources.Card_Title_Second_LIstitem_10</li>
                         </ul>
                     </div>
                 </div>
@@ -151,11 +151,11 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="text-center membership_card">
-                        Membership Cards
+                        @SiteResources.MembershipCard_Title
                     </h1>
 
                     <h2 class="text-center">
-                        Wide Range of Services Tailored Just For You
+                        @SiteResources.MembershipCard_subtitle
                     </h2>
                 </div>
             </div>
@@ -163,13 +163,13 @@
             <br class="d-sm-none" />
             <br class="d-sm-none" />
             <div class="row">
-                <div class="col-md-6 col-sm-12 col-10 mx-auto"><img class="img-fluid rounded" src="http://via.placeholder.com/531x332"></div>
-                <div class="col-md-6 col-sm-12 col-10 mx-auto"><img class="img-fluid rounded" src="http://via.placeholder.com/531x332"></div>
+                <div class="col-md-6 col-sm-12 col-10 mx-auto"><img class="img-fluid rounded" src="~/Contents/Images/Classic_Card_Website.png"></div>
+                <div class="col-md-6 col-sm-12 col-10 mx-auto"><img class="img-fluid rounded" src="~/Contents/Images/prestige_Card_Website.png"></div>
             </div>
             <br /><br />
             <div class="row">
-                <div class="col-md-6 col-sm-12 col-10 mx-auto"><img class="img-fluid rounded" src="http://via.placeholder.com/531x332"></div>
-                <div class="col-md-6 col-sm-12 col-10 mx-auto"><img class="img-fluid rounded" src="http://via.placeholder.com/531x332"></div>
+                <div class="col-md-6 col-sm-12 col-10 mx-auto"><img class="img-fluid rounded" src="~/Contents/Images/Platinum_Card_Website.png"></div>
+                <div class="col-md-6 col-sm-12 col-10 mx-auto"><img class="img-fluid rounded" src="~/Contents/Images/Premiere_Card_Website.png"></div>
             </div>
         </div>
 

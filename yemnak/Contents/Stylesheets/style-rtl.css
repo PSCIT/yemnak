@@ -67,7 +67,7 @@ html {
 
 .language {
     margin-left: 0 !important;
-    margin-right: 15rem;
+    margin-right: 10rem;
 }
 
     .language a {
@@ -310,6 +310,7 @@ header hr {
     height: 15.81rem;
     display: flex;
     align-items: center;
+    direction:ltr;
 }
 
     .clients .clientslick img {

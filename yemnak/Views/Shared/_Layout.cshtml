@@ -92,11 +92,11 @@ else
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href=@Url.Action("Index","Home")><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="/home#about">@SiteResources.AboutUs</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/home#services">@SiteResources.Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">@SiteResources.ContactUs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#about">@SiteResources.AboutUs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#services">@SiteResources.Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href=@Url.Action("ContactUs","Home")>@SiteResources.ContactUs</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">@SiteResources.Media</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/home#clients">@SiteResources.Clients</a></li>
                                 <li class="nav-item"><a class="nav-link text-light" href="#">@SiteResources.MembershipRequest</a></li>
@@ -111,18 +111,16 @@ else
             <div class="header-content">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-center">DIVERSIFIED SERVICES</h2>
-                        <h1 class="text-center">UNVARYING QUALITY</h1>
+                        <h2 class="text-center">@SiteResources.Header_heading</h2>
+                        <h1 class="text-center">@SiteResources.Header_Heading_2</h1>
                         <p class="text-center">
-                            Yemnak's concierge service which provides customers with all the services they require, such
-                            as completing government transactions in Kuwait also airport delivery which Yemnak
-                            achieves the highest level of luxury for VIP's.
+                           @SiteResources.Home_Page_Header_Para
                         </p>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-5">
-                        <a href="#" class="btn btn-block btn-dark">Learn More</a>
+                        <a href="#" class="btn btn-block btn-dark">@SiteResources.Learn_More_Btn</a>
                     </div>
                 </div>
             </div>
