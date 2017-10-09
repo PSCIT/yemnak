@@ -163,6 +163,10 @@ header hr {
 
 /*#endregion */
 
+/******************************************* HomePage *******************************************/
+
+/*#region Home-Page */
+
 /*#region About Us */
 
 /*#region About-Us-Head-Content */
@@ -305,6 +309,56 @@ header hr {
 
 /*#endregion */
 
+/*#endregion */
+
+/***********************************************************************************************/
+
+/******************************************* Contact US *******************************************/
+
+/*#region Contact-US */
+
+/*#region Map */
+
+.map {
+    height: 380px;
+    box-shadow: 0 0 40px -10px black;
+    background: rgb(240, 240, 240);
+}
+
+#map {
+    width: 65%;
+    height: 380px;
+    display: inline-block;
+}
+
+.map-c {
+    float: right;
+    width: 35%;
+    height: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+    .map-c .det {
+        padding-bottom: 0.8rem;
+    }
+
+        .map-c .det i {
+            font-size: 1.3rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+    .map-c .google_link {
+        font-size: 0.92rem;
+    }
+
+/*#endregion */
+
+/*#endregion */
+
+/***********************************************************************************************/
+
 /*#region Footer */
 
 footer {
@@ -410,6 +464,11 @@ footer {
 
     /*#endregion */
 
+
+    /******************************************* HomePage *******************************************/
+
+    /*#region Home-Page */
+
     /*#region About Us */
 
     /*#region About-Us-Head-Content */
@@ -506,6 +565,10 @@ footer {
         }
 
     /*#endregion */
+
+    /*#endregion */
+
+    /***********************************************************************************************/
 }
 
 /*Medium devices (tablets, less than 992px)*/
@@ -513,7 +576,8 @@ footer {
 
     /*#region Top-Bar */
     .topbar h6 {
-        font-size: 0.92rem;
+        font-size: 0.82rem !important;
+        padding-top: 0.495rem;
     }
 
     .social_icons a img {
@@ -640,6 +704,16 @@ footer {
 
     /*#endregion */
 
+    /******************************************* Contact US *******************************************/
+
+    /*#region Contact-US */
+    .map-c .google_link {
+        font-size: 0.86rem;
+    }
+    /*#endregion */
+
+    /***********************************************************************************************/
+
     /*#region Footer */
 
     footer .contact_details .address h2, footer .contact_details .contact h2 {
@@ -676,7 +750,7 @@ footer {
     }
 
     .img-flag img {
-        height: 1.1rem;
+        height: 1rem;
     }
 
     .language {

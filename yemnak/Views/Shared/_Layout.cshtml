@@ -1,4 +1,5 @@
 ﻿
+@using yemnak.App_GlobalResources;
 @using System.Web.Optimization;
 @using System.Globalization;
 
@@ -61,12 +62,15 @@ else
                     <a href="#"><img src="~/Contents/Images/instagram_logo_white_x50.png" /></a>
                 </div>
 
-                <div class="col-lg-4 col-md-5 col-sm-6 col-6">
-                    <h6>Contact : 1824824  |  info@yemnak.com</h6>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <h6>@SiteResources.ContactUs : 1824824  |  info@yemnak.com</h6>
                 </div>
 
                 <div class="ml-sm-auto ml-2 language">
-                    <a class="text-light" href="#">English</a> | <a class="fontArL languageAr text-light" href="#">العربي</a>
+                    @*<a class="text-light" href="#">English</a> | <a class="fontArL languageAr text-light" href="#">العربي</a>*@
+                    @Html.ActionLink("English", ViewContext.RouteData.Values["action"].ToString() + "/", ViewContext.RouteData.Values["controller"].ToString(), new { language = "en-US", @class = "text-light" }, null)
+                    |
+                    @Html.ActionLink("العربي", ViewContext.RouteData.Values["action"].ToString() + "/", ViewContext.RouteData.Values["controller"].ToString(), new { language = "ar-KW" }, new { @class = "fontArL languageAr text-light" })
                 </div>
             </div>
         </div>
@@ -81,7 +85,6 @@ else
 
                 <div class="col-lg-10 order-lg-2 col-md-9 col-7 order-1 ml-auto navbar-Parent">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        @*<a class="navbar-brand" href="#">Navbar</a>*@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -89,14 +92,14 @@ else
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href=@Url.Action("Index","Home")><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="/home#about">About</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/home#services">Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/home#clients">Clients</a></li>
-                                <li class="nav-item"><a class="nav-link text-light" href="#">Membership Request</a></li>
+                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#about">@SiteResources.AboutUs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#services">@SiteResources.Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href=@Url.Action("ContactUs","Home")>@SiteResources.ContactUs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">@SiteResources.Media</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/home#clients">@SiteResources.Clients</a></li>
+                                <li class="nav-item"><a class="nav-link text-light" href="#">@SiteResources.MembershipRequest</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -108,18 +111,16 @@ else
             <div class="header-content">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-center">DIVERSIFIED SERVICES</h2>
-                        <h1 class="text-center">UNVARYING QUALITY</h1>
+                        <h2 class="text-center">@SiteResources.Header_heading</h2>
+                        <h1 class="text-center">@SiteResources.Header_Heading_2</h1>
                         <p class="text-center">
-                            Yemnak's concierge service which provides customers with all the services they require, such
-                            as completing government transactions in Kuwait also airport delivery which Yemnak
-                            achieves the highest level of luxury for VIP's.
+                           @SiteResources.Home_Page_Header_Para
                         </p>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-5">
-                        <a href="#" class="btn btn-block btn-dark">Learn More</a>
+                        <a href="#" class="btn btn-block btn-dark">@SiteResources.Learn_More_Btn</a>
                     </div>
                 </div>
             </div>
@@ -141,9 +142,7 @@ else
                         <div class="col-md-6 col-sm-6 col-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/PSCLogo.svg" /></div>
                     </div>
                     <p class="text-justify text-light about_us">
-                        YEMNAK is one of the services provided by Public Services Company. The service has been
-                        launched since 2003 and one of our first and current main clients are the General
-                        Secretariat of the Council of Ministers.
+                        @SiteResources.Footer_Aboutus
                     </p>
                 </div>
                 <div class="col-md-1 col-sm-1">
@@ -153,12 +152,12 @@ else
                 <div class="col-lg-7 col-md-6 col-sm-5 col-8 mx-auto text-light">
                     <div class="contact_details">
                         <div class="address">
-                            <h2>Address</h2>
+                            <h2>@SiteResources.Address</h2>
                             <p>Ministry Zone, Al-Shuhadaa Governance Area,  Beside NBK Bank Building, South Surra</p>
                         </div>
 
                         <div class="contact">
-                            <h2>Contact</h2>
+                            <h2>@SiteResources.ContactUs</h2>
                             <p>1824824  |  info@yemnak.com</p>
                         </div>
 
@@ -173,7 +172,7 @@ else
 
                     <div class="copyright">
                         <p>
-                            Copyright © 2017 All rights reserved Public Service Company Kuwait
+                            @SiteResources.Copyright
                         </p>
                     </div>
                 </div>
@@ -206,7 +205,24 @@ else
             });
         </script>*@
 
-    @RenderSection("JavaScript", required: false)
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+    <script>
+        var myCenter = new google.maps.LatLng(51.308742, -0.320850);
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
 </body>
 </html>
