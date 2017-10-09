@@ -48,6 +48,14 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -58,6 +66,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -106,7 +116,36 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Contents\fonts\fontawesome-webfont.svg" />
+    <Content Include="Contents\Images\altijari.png" />
+    <Content Include="Contents\Images\Classic_Card_Website.png" />
+    <Content Include="Contents\Images\CMGS.png" />
+    <Content Include="Contents\Images\facebook-fb-icon.svg" />
+    <Content Include="Contents\Images\facebook_logo_white_x50.png" />
     <Content Include="Contents\Images\favicon.ico" />
+    <Content Include="Contents\Images\Flag_of_Kuwait.svg" />
+    <Content Include="Contents\Images\Flag_of_the_United_Arab_Emirates.svg" />
+    <Content Include="Contents\Images\Flag_of_the_United_Kingdom.svg" />
+    <Content Include="Contents\Images\footer_background.png" />
+    <Content Include="Contents\Images\googleplus-icon.png" />
+    <Content Include="Contents\Images\header_background.jpg" />
+    <Content Include="Contents\Images\instagram-icon.png" />
+    <Content Include="Contents\Images\Mission_ar.png" />
+    <Content Include="Contents\Images\MOJ.png" />
+    <Content Include="Contents\Images\Platinum_Card_Website.png" />
+    <Content Include="Contents\Images\Premiere_Card_Website.png" />
+    <Content Include="Contents\Images\prestige_Card_Website.png" />
+    <Content Include="Contents\Images\PSCLogo.svg" />
+    <Content Include="Contents\Images\Services_Background.png" />
+    <Content Include="Contents\Images\instagram_logo_white_x50.png" />
+    <Content Include="Contents\Images\Mission.png" />
+    <Content Include="Contents\Images\pexels-eyes-photo.png" />
+    <Content Include="Contents\Images\Service_Yemnak.png" />
+    <Content Include="Contents\Images\snapchat-icon.png" />
+    <Content Include="Contents\Images\twitter-icon.png" />
+    <Content Include="Contents\Images\Twitter_logo_white_x50.png" />
+    <Content Include="Contents\Images\Viva.png" />
+    <Content Include="Contents\Images\Warba_bank.png" />
+    <Content Include="Contents\Images\Yemnak_Logo.svg" />
     <Content Include="Contents\Scripts\bootstrap\bootstrap.js" />
     <Content Include="Contents\Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Contents\Scripts\modernizr\modernizr-2.8.3.min.js" />
@@ -124,8 +163,8 @@
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap.min.css" />
     <Content Include="Contents\Stylesheets\font-awesome.css" />
     <Content Include="Contents\Stylesheets\font-awesome.min.css" />
+    <Content Include="Contents\Stylesheets\style-rtl.css" />
     <Content Include="Contents\Stylesheets\style.css" />
-    <Content Include="Contents\Stylesheets\style_ar.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Contents\fonts\fontawesome-webfont.eot" />
@@ -133,21 +172,90 @@
     <Content Include="Contents\fonts\fontawesome-webfont.woff" />
     <Content Include="Contents\fonts\fontawesome-webfont.woff2" />
     <Content Include="Contents\fonts\FontAwesome.otf" />
+    <Content Include="Contents\fonts\Al-Jazeera-Arabic\Al-Jazeera-Arabic-Light.ttf" />
+    <Content Include="Contents\fonts\Al-Jazeera-Arabic\Al-Jazeera-Arabic-Regular.ttf" />
     <None Include="Contents\Scripts\jquery\jquery-3.1.1.intellisense.js" />
     <Content Include="Contents\Scripts\jquery\jquery-3.1.1.js" />
     <Content Include="Contents\Scripts\jquery\jquery-3.1.1.min.js" />
     <Content Include="Contents\Scripts\jquery\jquery-3.1.1.slim.js" />
     <Content Include="Contents\Scripts\jquery\jquery-3.1.1.slim.min.js" />
     <Content Include="Contents\Scripts\modernizr\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Models\YemnakModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YemnakModel.edmx</DependentUpon>
+      <LastGenOutput>YemnakModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\YemnakModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YemnakModel.edmx</DependentUpon>
+      <LastGenOutput>YemnakModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\SiteResources.ar-KW.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiteResources.ar-KW.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SiteResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiteResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StyleBundleExtensions.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberShipController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChildrenTb.cs">
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClassicTb.cs">
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderTb.cs">
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnerTb.cs">
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PlatinumTb.cs">
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PremierTb.cs">
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrestigeTb.cs">
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersTb.cs">
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\YemnakModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YemnakModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\YemnakModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YemnakModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\YemnakModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YemnakModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -165,6 +273,19 @@
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap-reboot.min.css.map" />
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap.css.map" />
     <Content Include="Contents\Stylesheets\bootstrap\bootstrap.min.css.map" />
+    <EntityDeploy Include="Models\YemnakModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YemnakModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\YemnakModel.edmx.diagram">
+      <DependentUpon>YemnakModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\yemnak.pubxml" />
+    <None Include="Properties\PublishProfiles\yemnakProfile.pubxml" />
+    <Content Include="Views\MemberShip\Classic.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -174,7 +295,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\SiteResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SiteResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\SiteResources.ar-KW.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SiteResources.ar-KW.designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

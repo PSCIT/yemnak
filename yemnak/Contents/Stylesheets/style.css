@@ -1,1 +1,1266 @@
 ﻿
+
+/*#region General-Declaration*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+@font-face {
+    font-family: 'Al-Jazeera-Arabic-Light';
+    src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Al-Jazeera-Arabic-Regular';
+    src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Regular.ttf') format('truetype');
+}
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*#endregion */
+
+/*#region Genric-Classes */
+
+.fontArL {
+    font-family: 'Al-Jazeera-Arabic-Light';
+}
+
+.Primary-Text-Color {
+    color: #051f40;
+}
+
+/*#endregion */
+
+/*#region Top-Bar */
+
+.topbar {
+    height: 1.875rem;
+    background-color: #09213e;
+}
+
+    .topbar h6 {
+        padding-top: 0.375rem;
+        font-weight: 400;
+    }
+
+.img-flag img {
+    padding-top: 0.3rem;
+    height: 1.5rem;
+    margin: 0 0.2rem;
+}
+
+.social_icons a {
+    display: inline-flex;
+    margin-left: 0.5rem;
+    padding-top: 0.25rem;
+}
+
+    .social_icons a img {
+        flex: 1;
+        height: 1.375rem;
+    }
+
+.language a {
+    text-decoration: none;
+}
+
+    .language a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+/*#endregion */
+
+/*#region Header */
+
+header {
+    padding-top: 2.5rem;
+    background-image: url('../Images/header_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 3.625rem;
+}
+
+/*#region Navigation */
+
+.logo {
+    height: 6.875rem;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav .active > .nav-link {
+    border-top: 0.0625rem solid #444;
+    border-bottom: 0.0625rem solid #444;
+}
+
+.nav-item:first-child {
+    padding-left: 1.25rem;
+}
+
+.nav-item:last-child {
+    background-color: #09213e;
+    padding-left: 1.25rem;
+    padding-right: 0.625rem;
+}
+
+.navbar .nav-item {
+    padding-right: 1.25rem;
+}
+
+    .navbar .nav-item .nav-link {
+        padding: 0;
+    }
+
+nav ul {
+    padding-top: 2.938rem;
+}
+
+    nav ul li a {
+        font-size: 1.5625rem; /*25px*/
+    }
+
+/*#endregion */
+
+header hr {
+    margin-top: 1.5625rem;
+    margin-bottom: 0;
+}
+
+/*#region Header-Content */
+
+.header-content h2 {
+    font-size: 4.063rem; /*65px*/
+    font-weight: 300;
+    margin-top: 3.0625rem; /*49px*/
+}
+
+.header-content h1 {
+    font-weight: 700;
+    font-size: 5.313rem; /*85px*/
+}
+
+.header-content p {
+    font-weight: 400;
+    font-size: 1.5625rem; /*25px*/
+    padding: 0 2.375rem; /*0 38px*/
+}
+
+.header-content .btn {
+    font-size: 1.875rem;
+    background-color: #3a4a63;
+    font-weight: 400;
+}
+
+/*#endregion */
+
+/*#endregion */
+
+/******************************************* HomePage *******************************************/
+
+/*#region Home-Page */
+
+/*#region About Us */
+
+/*#region About-Us-Head-Content */
+
+.about_us .title h1 {
+    margin-top: 3.625rem;
+    font-weight: 300;
+    font-size: 4.063rem;
+}
+
+.about_us .title h2 {
+    font-weight: 300;
+    font-size: 2.0625rem;
+}
+
+.about_us .description p {
+    font-size: 1.6rem;
+    margin-bottom: 3.875rem;
+    line-height: 3rem;
+}
+
+/*#endregion */
+
+/*#region Vision-Mission */
+
+.about_us .our_vision h1 {
+    font-weight: 300;
+    font-size: 5rem;
+}
+
+.about_us .our_vision p {
+    font-size: 2.1rem;
+    line-height: 3.125rem;
+    font-weight: 300;
+}
+
+.about_us .our_vision .eyes {
+    width: 120%;
+    position: relative;
+    left: -4.25rem;
+    top: -1rem;
+}
+
+.about_us .our_mission p {
+    font-size: 2.6rem;
+    line-height: 4rem;
+    font-weight: 300;
+}
+
+.about_us .our_mission img {
+    position: relative;
+    top: -2rem;
+}
+
+/*#endregion */
+
+/*#endregion */
+
+/*#region Services */
+
+/*#region Services-Head-Content */
+
+.services {
+    margin-top: 7.188rem;
+    background-image: url('../Images/Services_Background.png');
+    background-size: cover;
+}
+
+    .services h1 {
+        font-weight: 700;
+        font-size: 5.438rem;
+        margin-top: 4rem;
+    }
+
+    .services h2 {
+        font-weight: 100;
+        font-size: 3.125rem;
+    }
+
+/*#endregion */
+
+.services_Section2 {
+    background-color: #eaebed;
+    padding-bottom: 3.6875rem;
+    padding-top: 3.6875rem;
+}
+
+    /*#region Cards */
+
+    .services_Section2 .card .card-header h3 {
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+
+    .services_Section2 .card .card-body .card-text {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .services_Section2 .card .card-footer ul li {
+        list-style: disc;
+        margin-bottom: 0.6rem;
+    }
+
+    /*#endregion */
+
+    /*#region Membership-Cards */
+
+    .services_Section2 .membership_card h1 {
+        margin-top: 3.6875rem;
+        font-weight: 300;
+        font-size: 4.063rem;
+    }
+
+    .services_Section2 .membership_card h2 {
+        font-weight: 300;
+        font-size: 2.0625rem;
+    }
+
+    .services_Section2 .membership_card hr {
+        margin-top: 2.125rem;
+        margin-bottom: 2.9375rem;
+    }
+
+/*#endregion */
+
+/*#endregion */
+
+/*#region Clients */
+
+.clients {
+    height: 15.81rem;
+    display: flex;
+    align-items: center;
+}
+
+    .clients .clientslick img {
+        height: 150px;
+    }
+
+/*#endregion */
+
+/*#endregion */
+
+/***********************************************************************************************/
+
+/******************************************* Contact US *******************************************/
+
+/*#region Contact-US */
+
+/*#region Map */
+
+.map {
+    height: 380px;
+    box-shadow: 0 0 40px -10px black;
+    background: rgb(240, 240, 240);
+}
+
+#map {
+    width: 65%;
+    height: 380px;
+    display: inline-block;
+}
+
+.map-c {
+    float: right;
+    width: 35%;
+    height: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+    .map-c .det {
+        padding-bottom: 0.8rem;
+    }
+
+        .map-c .det i {
+            font-size: 1.3rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+    .map-c .google_link {
+        font-size: 0.92rem;
+    }
+
+/*#endregion */
+
+/*#endregion */
+
+/***********************************************************************************************/
+
+/*#region Footer */
+
+footer {
+    height: 28rem;
+    background-image: url('../Images/footer_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+}
+
+    footer .about_us {
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.875rem;
+        margin-top: 1.9375rem;
+    }
+
+    footer .logo {
+        height: 9.25rem;
+    }
+
+    footer .contact_details .address h2, footer .contact_details .contact h2 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    footer .contact_details .address p, footer .contact_details .contact p {
+        font-size: 1.375rem;
+        font-weight: 300;
+    }
+
+    footer .contact_details .contact h2 {
+        margin-top: 1.75rem;
+    }
+
+    footer .contact_details .social {
+        margin-top: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+        footer .contact_details .social a img {
+            height: 2.5rem;
+        }
+
+    footer .copyright {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+/*#endregion */
+
+/*#region Media Queries From Xl-SM */
+
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199px) {
+
+    /*#region Top-Bar */
+
+    .img-flag img {
+        padding-top: 0.3rem;
+        height: 1.3rem;
+        margin: 0 0.2rem;
+    }
+
+    /*#endregion */
+
+    /*#region Header */
+
+    /*#region Navigation */
+
+    nav ul li a {
+        font-size: 1.2570rem; /*25px*/
+    }
+
+    /*#endregion */
+
+    header hr {
+        margin-top: 1.2225rem;
+    }
+
+    /*#region Header-Content */
+
+    .header-content h2 {
+        font-size: 3.438rem;
+    }
+
+    .header-content h1 {
+        font-size: 4.688rem;
+    }
+
+    .header-content p {
+        font-size: 1.5625rem;
+        padding: 0 2.375rem;
+    }
+
+    .header-content .btn {
+        font-size: 1.875rem;
+        background-color: #3a4a63;
+        font-weight: 400;
+    }
+
+    /*#endregion */
+
+    /*#endregion */
+
+
+    /******************************************* HomePage *******************************************/
+
+    /*#region Home-Page */
+
+    /*#region About Us */
+
+    /*#region About-Us-Head-Content */
+
+    .about_us .description p {
+        font-size: 1.5rem;
+        text-align: justify !important;
+        line-height: 2.9rem;
+    }
+
+    /*#endregion */
+
+    /*#region Vision-Mission */
+
+    .about_us .our_vision h1 {
+        font-size: 4.6rem;
+    }
+
+    .about_us .our_vision p {
+        font-size: 1.8rem;
+    }
+
+    .about_us .our_vision .eyes {
+        left: -3.25rem;
+        top: 0.5rem;
+    }
+
+    .about_us .our_mission p {
+        font-size: 2.58rem;
+        line-height: 4rem;
+    }
+
+    .about_us .our_mission img {
+        top: 0;
+    }
+
+    /*#endregion */
+
+    /*#endregion */
+
+    /*#region Services */
+
+    /*#region Services-Head-Content */
+    .services h1 {
+        font-size: 4.438rem;
+        margin-top: 2rem;
+    }
+
+    .services h2 {
+        font-size: 3rem;
+    }
+
+    /*#endregion */
+
+    /*#region Cards */
+
+    .services_Section2 .card .card-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .services_Section2 .card .card-body .card-text {
+        font-size: 1.15rem;
+        margin-top: 0;
+    }
+
+    .services_Section2 .card .card-footer ul li {
+        font-size: 0.98rem;
+    }
+
+    /*#endregion */
+
+    /*#region Membership-Cards */
+    .services_Section2 .membership_card h1 {
+        font-size: 3.8rem;
+    }
+
+    .services_Section2 .membership_card h2 {
+        font-size: 2rem;
+    }
+    /*#endregion */
+
+    /*#endregion */
+
+    /*#region Clients */
+
+    .clients {
+        height: 15rem;
+        display: flex;
+        align-items: center;
+    }
+
+        .clients .clientslick img {
+            height: 120px;
+        }
+
+    /*#endregion */
+
+    /*#endregion */
+
+    /***********************************************************************************************/
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991px) {
+
+    /*#region Top-Bar */
+    .topbar h6 {
+        font-size: 0.82rem !important;
+        padding-top: 0.495rem;
+    }
+
+    .social_icons a img {
+        height: 1.1rem;
+    }
+    /*#endregion */
+
+    /*#region Header */
+
+    /*#region Navigation */
+    .navbar-Parent nav button {
+        margin-top: 2rem;
+    }
+
+    .nav-item:first-child {
+        padding-left: 0;
+    }
+
+    .nav-item:last-child {
+        padding-left: 0;
+        background-color: transparent;
+    }
+
+        .nav-item:last-child a {
+            color: #2c3e50 !important;
+        }
+    /*#endregion */
+
+    /*#region Header-Content */
+    .header-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .header-content h1 {
+        font-size: 3.6rem;
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .header-content .btn {
+        font-size: 1.3rem;
+    }
+
+    /*#endregion */
+
+    /*#endregion */
+
+    /*#region About Us */
+
+    /*#region About-Us-Head-Content */
+
+    .about_us .title h1 {
+        margin-top: 3rem;
+        font-size: 3.5rem;
+    }
+
+    .about_us .title h2 {
+        font-size: 1.8rem;
+    }
+
+    .about_us .description p {
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+
+    /*#endregion */
+
+    /*#region Vision-Mission */
+
+    .about_us .our_vision h1 {
+        font-size: 4.2rem;
+    }
+
+    .about_us .our_vision .eyes {
+        left: 5rem;
+        right: 0;
+        top: 0.2rem;
+        width: 80%;
+    }
+
+    .about_us .our_mission img {
+        top: 1rem;
+    }
+
+    .about_us .our_mission p {
+        font-size: 2.28rem;
+    }
+    /*#endregion */
+
+    /*#endregion */
+
+    /*#region Services */
+
+    /*#region Services-Head-Content */
+
+    .services h1 {
+        font-size: 4rem;
+        margin-top: 1rem;
+    }
+
+    .services h2 {
+        font-size: 2.125rem;
+    }
+
+    /*#endregion */
+
+    /*#region Cards */
+
+    .services_Section2 .card:first-child {
+        margin-bottom: 1rem;
+    }
+    /*#endregion */
+
+    /*#endregion */
+
+    /*#region Clients */
+
+    .clients .clientslick img {
+        height: 100px;
+    }
+
+    /*#endregion */
+
+    /******************************************* Contact US *******************************************/
+
+    /*#region Contact-US */
+    .map-c .google_link {
+        font-size: 0.86rem;
+    }
+    /*#endregion */
+
+    /***********************************************************************************************/
+
+    /*#region Footer */
+
+    footer .contact_details .address h2, footer .contact_details .contact h2 {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    footer .contact_details .address p, footer .contact_details .contact p {
+        font-size: 1.175rem;
+    }
+
+    footer .contact_details .contact h2 {
+        margin-top: 1.55rem;
+    }
+
+    footer .contact_details .social a img {
+        margin-right: 0.3rem;
+    }
+
+    footer .copyright {
+        font-size: 0.9rem;
+    }
+
+    /*#endregion */
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767px) {
+
+    /*#region Top-Bar */
+    .topbar h6 {
+        font-size: .86rem;
+        padding-top: 0.5rem;
+    }
+
+    .img-flag img {
+        height: 1rem;
+    }
+
+    .language {
+        padding-top: 0.09rem;
+    }
+
+    /*#endregion */
+
+    /*#region Header */
+
+    /*#region Navigation */
+    .navbar-Parent nav button {
+        margin-top: 2.5rem;
+    }
+    /*#endregion */
+
+    /*#region Header-Content */
+    .header-content h2 {
+        font-size: 2.5rem;
+        margin-top: 2.0625rem;
+    }
+
+    .header-content h1 {
+        font-size: 3rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .header-content .btn {
+        font-size: 1.2rem;
+    }
+    /*#endregion */
+
+    /*#endregion */
+
+    /*#region About Us */
+
+    /*#region About-Us-Head-Content */
+
+    .about_us .title h1 {
+        margin-top: 1.5rem;
+        font-size: 3rem;
+    }
+
+    .about_us .title h2 {
+        font-size: 1.6rem;
+    }
+
+    .about_us .description p {
+        font-size: 1.1rem;
+        line-height: 2.4rem;
+    }
+
+    /*#endregion */
+
+    /*#region Vision-Mission */
+
+    .about_us .our_vision h1 {
+        font-size: 3.8rem;
+    }
+
+    .about_us .our_vision p {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+    }
+
+    .about_us .our_vision .eyes {
+        left: 7rem;
+        right: 0;
+        top: 0.2rem;
+        width: 70%;
+    }
+
+    .about_us .our_mission img {
+        top: 0;
+    }
+
+    .about_us .our_mission p {
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+    }
+    /*#endregion */
+
+    /*#endregion */
+
+    /*#region Services-Head-Content */
+
+    .services h1 {
+        font-size: 2.3rem;
+        margin-top: 2.8rem;
+    }
+
+    .services h2 {
+        font-size: 1.19rem;
+    }
+
+    /*#endregion */
+
+    /*#region Membership-Cards */
+
+    .services_Section2 .membership_card h1 {
+        font-size: 3.5rem;
+    }
+
+    .services_Section2 .membership_card h2 {
+        font-size: 1.3rem;
+    }
+
+    .membership_card img {
+        margin-bottom: 8rem;
+    }
+
+    .membership_card .row:last-child div:last-child img:last-child {
+        margin-bottom: 0;
+    }
+
+    /*#endregion */
+
+    /*#region Footer */
+
+    footer .about_us {
+        line-height: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    footer .contact_details .address h2, footer .contact_details .contact h2 {
+        font-size: 1.6rem;
+        margin-top: 2.5rem;
+    }
+
+    footer .contact_details .address p, footer .contact_details .contact p {
+        font-size: 0.93rem;
+    }
+
+    footer .copyright {
+        font-size: 0.7rem;
+    }
+    /*#endregion */
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {
+
+    /*#region Services */
+    .services h1 {
+        font-size: 1.9rem;
+        margin-top: 1.5rem;
+    }
+
+    .services h2 {
+        font-size: 0.95rem;
+    }
+
+    .Yemnak_Service_Image {
+        max-width: 101% !important;
+    }
+    /*#endregion */
+
+    /*#region Membership-Cards */
+
+    .services_Section2 .membership_card h1 {
+        font-size: 3rem;
+    }
+
+    .services_Section2 .membership_card h2 {
+        font-size: 1.15rem;
+    }
+
+    .membership_card img {
+        margin-bottom: 8rem;
+    }
+
+    .membership_card .row:last-child div:last-child img:last-child {
+        margin-bottom: 0;
+    }
+
+    /*#endregion */
+
+    /*#region Footer */
+
+    footer {
+        height: 50rem;
+    }
+
+        footer .contact_details .address h2, footer .contact_details .contact h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer .contact_details .address p, footer .contact_details .contact p {
+            font-size: 1.07rem;
+        }
+
+        footer .copyright {
+            font-size: 0.71rem;
+        }
+
+    /*#endregion */
+}
+
+/* Other Media Queries to Fix*/
+@media (max-width: 535px) {
+
+    .img-flag img {
+        height: 1rem;
+    }
+
+    .topbar h6 {
+        font-size: .62rem;
+        padding-top: .7rem;
+    }
+
+    .Yemnak_Service_Image {
+        max-width: 102% !important;
+    }
+}
+
+@media (max-width: 527px) {
+    .services h2 {
+        font-size: .85rem;
+    }
+
+    .services h1 {
+        font-size: 1.5rem;
+        margin-top: 1.8rem;
+    }
+
+    .Yemnak_Service_Image {
+        max-width: 103% !important;
+    }
+
+    .about_us .our_mission img {
+        top: 1rem;
+    }
+
+    .clients .clientslick img {
+        height: 95px;
+    }
+}
+
+@media (max-width: 515px) {
+    .about_us .our_mission p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 504px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content h2 {
+        font-size: 2rem;
+    }
+
+    footer .contact_details .social {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 497px) {
+    .img-flag img {
+        height: 0.89rem;
+    }
+}
+
+@media (max-width: 483px) {
+    .header-content p {
+        font-size: 0.95rem;
+    }
+
+    .about_us .our_mission p {
+        line-height: 2.4rem;
+    }
+
+    .services h1 {
+        font-size: 1.4rem;
+        margin-top: 1.3rem;
+    }
+
+    .services h2 {
+        font-size: .7rem;
+    }
+
+    .services_Section2 .card .card-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .clients .clientslick img {
+        height: 85px;
+    }
+}
+
+@media (max-width: 454px) {
+    .img-flag img {
+        height: .8rem;
+    }
+
+    .header-content p {
+        font-size: .85rem;
+        line-height: 1.5rem;
+    }
+
+    .about_us .title h2 {
+        font-size: 1.1rem;
+    }
+
+    .about_us .description p {
+        font-size: 1rem;
+        line-height: 2.1rem;
+    }
+
+    .about_us .our_vision h1 {
+        font-size: 3.2rem;
+    }
+
+    .about_us .our_vision p {
+        font-size: 1.3rem;
+        line-height: 2.6rem;
+    }
+
+    .services {
+        margin-top: 5.188rem;
+    }
+
+    .services_Section2 .card .card-body .card-text {
+        font-size: 1rem;
+    }
+
+    .membership_card img {
+        margin-bottom: 3rem;
+    }
+
+    .membership_card .row .div:last-child img:last-child {
+        margin-bottom: 0;
+    }
+
+    .clients .clientslick img {
+        height: 80px;
+    }
+
+    .language a {
+        font-size: 0.8rem;
+    }
+
+    .about_us .our_mission p {
+        font-size: 1.13rem;
+        line-height: 2.2rem;
+    }
+
+    .address h2, footer .contact_details .contact h2 {
+        margin-top: 1rem;
+    }
+
+    footer .about_us {
+        font-size: 0.97rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .services_Section2 .card .card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    footer .contact_details .address p, footer .contact_details .contact p {
+        font-size: 0.89rem;
+    }
+
+    footer .contact_details .address h2, footer .contact_details .contact h2 {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .header-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .img-flag img {
+        height: .7rem;
+    }
+
+    .clients .clientslick img {
+        height: 70px;
+    }
+}
+
+@media (max-width: 412px) {
+
+    .services h2 {
+        font-size: .58rem;
+    }
+
+    .services_Section2 .card .card-header h3 {
+        font-size: 1.08rem;
+    }
+
+    .topbar h6 {
+        font-size: .55rem;
+    }
+
+    .header-content p {
+        font-size: .79rem;
+    }
+
+    .about_us .title h1 {
+        margin-top: 0rem;
+    }
+
+    .about_us .our_vision p {
+        font-size: 1.1rem;
+        line-height: 2.4rem;
+    }
+
+    .about_us .our_mission p {
+        font-size: 1rem;
+        line-height: 1.90rem;
+    }
+
+    .about_us .our_mission img {
+        top: 0.2rem;
+    }
+
+    .services {
+        margin-top: 2.188rem;
+    }
+
+        .services h1 {
+            font-size: 1.19rem;
+            margin-top: 1.1rem;
+        }
+
+    .services_Section2 .card .card-footer ul li {
+        font-size: .88rem;
+    }
+
+    .services_Section2 .membership_card h2 {
+        font-size: 1rem;
+    }
+
+    .services_Section2 .membership_card h1 {
+        font-size: 2.2rem;
+    }
+
+    .services_Section2 .card .card-body .card-text {
+        font-size: 0.9rem;
+    }
+
+    nav ul li a {
+        font-size: 1.16rem;
+        line-height: 2.3rem;
+    }
+}
+
+@media (max-width: 386px) {
+
+    .language a {
+        font-size: .7rem;
+    }
+
+    nav ul {
+        padding-top: 1.8rem;
+    }
+
+        nav ul li a {
+            font-size: 1rem;
+            line-height: 2.3rem;
+        }
+
+    .header-content p {
+        font-size: .7rem;
+    }
+
+    .about_us .title h1 {
+        font-size: 2.5rem;
+    }
+
+    .about_us .description p {
+        font-size: 1rem;
+        line-height: 2.1rem;
+    }
+
+    .about_us .our_vision h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 382px) {
+    .img-flag img {
+        height: .6rem;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .services_Section2 .card .card-header h3 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+/*#endregion */

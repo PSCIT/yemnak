@@ -1,8 +1,23 @@
 ﻿
+@using yemnak.App_GlobalResources;
 @using System.Web.Optimization;
+@using System.Globalization;
+
+@if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+{
+    ViewBag.dir = "rtl"; ViewBag.rtl = true;
+}
+
+else
+{
+    ViewBag.dir = "ltr"; ViewBag.rtl = false;
+}
 
 <!DOCTYPE html>
-<html>
+<html lang="@CultureInfo.CurrentCulture.Name" dir=@ViewBag.dir>
+@{
+    Session["lang"] = CultureInfo.CurrentCulture.Name;
+}
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,17 +32,154 @@
 
     @Styles.Render("~/Contents/Stylesheets/bootstrap/bootstrap")
 
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+
     @Styles.Render("~/Contents/Stylesheets/FontAwesome")
 
     @Styles.Render("~/Contents/Stylesheets/animate")
 
     @Styles.Render("~/Contents/Stylesheets/LocalStyles")
 
+    @Styles.Render("~/Contents/Stylesheets/style" + (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft ? "-rtl":"") + ".css")
+
 
 </head>
 <body>
+    <div class="topbar text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-sm-3 col-3 img-flag">
+                    <img class="img-fluid" src="~/Contents/Images/Flag_of_Kuwait.svg" />
+                    <img class="img-fluid" src="~/Contents/Images/Flag_of_the_United_Kingdom.svg" />
+                    <img class="img-fluid" src="~/Contents/Images/Flag_of_the_United_Arab_Emirates.svg" />
+                </div>
+                <div class="col-md-2 d-md-block d-none social_icons">
+                    <a href="#"><img src="~/Contents/Images/facebook_logo_white_x50.png" alt="Facebook Yemnak" /></a>
+                    <a href="#"><img src="~/Contents/Images/Twitter_logo_white_x50.png" /></a>
+                    <a href="#"><img src="~/Contents/Images/instagram_logo_white_x50.png" /></a>
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                    <h6>@SiteResources.ContactUs : 1824824  |  info@yemnak.com</h6>
+                </div>
+
+                <div class="ml-sm-auto ml-2 language">
+                    @*<a class="text-light" href="#">English</a> | <a class="fontArL languageAr text-light" href="#">العربي</a>*@
+                    @Html.ActionLink("English", ViewContext.RouteData.Values["action"].ToString() + "/", ViewContext.RouteData.Values["controller"].ToString(), new { language = "en-US", @class = "text-light" }, null)
+                    |
+                    @Html.ActionLink("العربي", ViewContext.RouteData.Values["action"].ToString() + "/", ViewContext.RouteData.Values["controller"].ToString(), new { language = "ar-KW" }, new { @class = "fontArL languageAr text-light" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 order-lg-1 col-md-3 col-4 order-2">
+                    <img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" />
+                </div>
+
+                <div class="col-lg-10 order-lg-2 col-md-9 col-7 order-1 ml-auto navbar-Parent">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href=@Url.Action("Index","Home")><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#about">@SiteResources.AboutUs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#services">@SiteResources.Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href=@Url.Action("ContactUs","Home")>@SiteResources.ContactUs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">@SiteResources.Media</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/home#clients">@SiteResources.Clients</a></li>
+                                <li class="nav-item"><a class="nav-link text-light" href="#">@SiteResources.MembershipRequest</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="header-content">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">@SiteResources.Header_heading</h2>
+                        <h1 class="text-center">@SiteResources.Header_Heading_2</h1>
+                        <p class="text-center">
+                           @SiteResources.Home_Page_Header_Para
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-5">
+                        <a href="#" class="btn btn-block btn-dark">@SiteResources.Learn_More_Btn</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </header>
 
     @RenderBody()
+
+    <!-- #region Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-8 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" /></div>
+                        <div class="col-md-6 col-sm-6 col-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/PSCLogo.svg" /></div>
+                    </div>
+                    <p class="text-justify text-light about_us">
+                        @SiteResources.Footer_Aboutus
+                    </p>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                    <hr class="d-none d-sm-block" width="1" style="background-color:#fff;height: 95%;" />
+                    <hr class="d-block d-sm-none" style="background-color:#fff; width:85%" />
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-5 col-8 mx-auto text-light">
+                    <div class="contact_details">
+                        <div class="address">
+                            <h2>@SiteResources.Address</h2>
+                            <p>Ministry Zone, Al-Shuhadaa Governance Area,  Beside NBK Bank Building, South Surra</p>
+                        </div>
+
+                        <div class="contact">
+                            <h2>@SiteResources.ContactUs</h2>
+                            <p>1824824  |  info@yemnak.com</p>
+                        </div>
+
+                        <div class="social">
+                            <a href="#"> <img class="img-fluid" src="~/Contents/Images/facebook-fb-icon.svg" /></a>
+                            <a href="#"><img class="img-fluid" src="~/Contents/Images/twitter-icon.png" /></a>
+                            <a href="#"><img class="img-fluid" src="~/Contents/Images/snapchat-icon.png" /></a>
+                            <a href="#"><img class="img-fluid" src="~/Contents/Images/instagram-icon.png" /></a>
+                        </div>
+
+                    </div>
+
+                    <div class="copyright">
+                        <p>
+                            @SiteResources.Copyright
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- #endregion -->
 
     @Scripts.Render("~/Contents/Scripts/jquery/jquery")
 
@@ -37,9 +189,40 @@
 
     @Scripts.Render("~/Contents/Scripts/modernizr/modernizr")
 
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+
     @Scripts.Render("~/Contents/Scripts/LocalScripts")
 
-    @RenderSection("JavaScript", required: false)
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+        <script src="http://ataredo.com/external/code/lucid.js"></script>
+
+        <script>
+            $(window).on('load', function () {
+
+                $(this).impulse();
+            });
+        </script>*@
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+    <script>
+        var myCenter = new google.maps.LatLng(51.308742, -0.320850);
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
 </body>
 </html>
