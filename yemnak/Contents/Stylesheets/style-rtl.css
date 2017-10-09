@@ -284,13 +284,13 @@ header hr {
 
     /*#region Membership-Cards */
 
-    .services_Section2 .membership_card h1 {
+    .services_Section2 .membership_card .title {
         margin-top: 3.6875rem;
         font-weight: 300;
         font-size: 4.063rem;
     }
 
-    .services_Section2 .membership_card h2 {
+    .services_Section2 .membership_card .subtitle {
         font-weight: 300;
         font-size: 2.0625rem;
     }
@@ -299,6 +299,15 @@ header hr {
         margin-top: 2.125rem;
         margin-bottom: 2.9375rem;
     }
+
+.membershipcard_Image:hover {
+    cursor: pointer;
+}
+
+.modal-title h1 {
+    font-weight: 300;
+    color: #2c3e50;
+}
 
 /*#endregion */
 
@@ -310,7 +319,7 @@ header hr {
     height: 15.81rem;
     display: flex;
     align-items: center;
-    direction:ltr;
+    direction: ltr;
 }
 
     .clients .clientslick img {

@@ -1,4 +1,5 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
 
 /*#region General-Declaration*/
 
@@ -163,7 +164,20 @@ header hr {
 
 /*#endregion */
 
-/******************************************* HomePage *******************************************/
+/****************************************** HomePage *******************************************/
+
+.letter {
+  display: inline-block;
+  padding:0.1rem;
+  font-family: 'Fredericka the Great', cursive;
+
+}
+
+#word{
+    font-size:3.5rem;
+    
+    font-weight:300;
+}
 
 /*#region Home-Page */
 
@@ -275,13 +289,13 @@ header hr {
 
     /*#region Membership-Cards */
 
-    .services_Section2 .membership_card h1 {
+    .services_Section2 .membership_card .title {
         margin-top: 3.6875rem;
         font-weight: 300;
         font-size: 4.063rem;
     }
 
-    .services_Section2 .membership_card h2 {
+    .services_Section2 .membership_card .subtitle {
         font-weight: 300;
         font-size: 2.0625rem;
     }
@@ -290,6 +304,116 @@ header hr {
         margin-top: 2.125rem;
         margin-bottom: 2.9375rem;
     }
+
+.membershipcard_Image {
+    border-radius: 30px;
+    box-shadow: 0 30px 50px #444;
+    transition: 0.8s all ease-in;
+}
+
+    .membershipcard_Image:hover {
+        cursor: pointer;
+        box-shadow: 0 10px 40px #666;
+        transition: 0.5s all ease-in-out;
+    }
+
+
+.classic .modal {
+    background-image: linear-gradient(rgba(251, 180, 130,0.9), rgba(251, 180, 130,0.9)), url('../Images/Classic_Card_Website.png');
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+    .classic .modal .modal-dialog .modal-content {
+        background-image: linear-gradient(rgba(251, 180, 130,0.9), rgba(251, 180, 130,0.9)), url('../Images/Classic_Card_Website.png');
+        background-size: cover;
+    }
+
+        .classic .modal .modal-dialog .modal-content .modal-header, .classic .modal .modal-dialog .modal-content .modal-footer {
+            background-color: #744E46;
+        }
+
+            .classic .modal .modal-dialog .modal-content .modal-header .modal-title h1 {
+                font-weight: 300;
+                color: #fff;
+            }
+
+
+.Prestige .modal {
+    background-image: linear-gradient(rgba(56, 54, 53,0.9), rgba(56, 54, 53,0.9)), url('../Images/prestige_Card_Website.png');
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+    .Prestige .modal .modal-dialog .modal-content {
+        background-image: linear-gradient(rgba(56, 54, 53,0.9), rgba(56, 54, 53,0.9)), url('../Images/prestige_Card_Website.png');
+        background-size: cover;
+    }
+
+        .Prestige .modal .modal-dialog .modal-content .modal-header, .Prestige .modal .modal-dialog .modal-content .modal-footer {
+            background-color: #AA8E4C;
+        }
+
+            .Prestige .modal .modal-dialog .modal-content .modal-header .modal-title h1 {
+                font-weight: 300;
+                color: #fff;
+            }
+
+        .Prestige .modal .modal-dialog .modal-content .modal-body {
+            color: #fff;
+        }
+
+.Platinum .modal {
+    background-image: linear-gradient(rgba(184, 187, 184,0.9), rgba(184, 187, 184,0.9)), url('../Images/Platinum_Card_Website.png');
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+    .Platinum .modal .modal-dialog .modal-content {
+        background-image: linear-gradient(rgba(184, 187, 184,0.9), rgba(184, 187, 184,0.9)), url('../Images/Platinum_Card_Website.png');
+        background-size: cover;
+    }
+
+        .Platinum .modal .modal-dialog .modal-content .modal-header, .Platinum .modal .modal-dialog .modal-content .modal-footer {
+            background-color: #58585A;
+        }
+
+            .Platinum .modal .modal-dialog .modal-content .modal-header .modal-title h1 {
+                font-weight: 300;
+                color: #fff;
+            }
+
+        .Platinum .modal .modal-dialog .modal-content .modal-body {
+            color: #000;
+        }
+
+.Premiere .modal {
+    background-image: linear-gradient(rgba(83, 151, 154,0.9), rgba(83, 151, 154,0.9)), url('../Images/Premiere_Card_Website.png');
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+    .Premiere .modal .modal-dialog .modal-content {
+        background-image: linear-gradient(rgba(83, 151, 154,0.9), rgba(83, 151, 154,0.9)), url('../Images/Premiere_Card_Website.png');
+        background-size: cover;
+    }
+
+        .Premiere .modal .modal-dialog .modal-content .modal-header, .Premiere .modal .modal-dialog .modal-content .modal-footer {
+            background-color: #005864;
+        }
+
+            .Premiere .modal .modal-dialog .modal-content .modal-header .modal-title h1 {
+                font-weight: 300;
+                color: #fff;
+            }
+
+        .Premiere .modal .modal-dialog .modal-content .modal-body {
+            color: #000;
+        }
+
+.modal-content {
+    border-radius: 0;
+}
 
 /*#endregion */
 
