@@ -1,12 +1,11 @@
-﻿@model yemnak.Models.ClassicTb
+﻿@model yemnak.Models.PremierTb
 
 @{
-    ViewBag.Title = "Classic";
+    ViewBag.Title = "Premier";
 }
-
 <style>
-    .header-content{
-        display:none;
+    .header-content {
+        display: none;
     }
 
     header {
@@ -14,7 +13,7 @@
     }
 </style>
 
-<h2>Classic</h2>
+<h2>Premier</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -71,6 +70,7 @@
                 @Html.ValidationMessageFor(model => model.BOD, "", new { @class = "text-danger" })
             </div>
         </div>
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
