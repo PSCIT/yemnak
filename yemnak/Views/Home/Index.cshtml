@@ -1,7 +1,4 @@
-
-
-
-@using yemnak.App_GlobalResources;
+﻿@using yemnak.App_GlobalResources;
 @using System.Globalization;
 @{
     ViewBag.Title = "Offical Website";
@@ -55,11 +52,11 @@
                 <div class="col-3">
                     @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
                     {
-                        <img class="img-fluid" src="~/Contents/Images/Mission_ar.png" />
+                    <img class="img-fluid" src="~/Contents/Images/Mission_ar.png" />
                     }
                     else
                     {
-                        <img class="img-fluid" src="~/Contents/Images/Mission.png" />
+                    <img class="img-fluid" src="~/Contents/Images/Mission.png" />
                     }
                 </div>
 
@@ -200,33 +197,71 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <div class="modal-title" id="exampleModalLabel">
-                                            <h1>Classic Card</h1>
+
+                                            @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                            {
+                                                <h1>كلاسيك</h1>
+                                            }
+                                            else
+                                            {
+                                                <h1>Classic Card</h1>
+                                            }
                                         </div>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <h5>Membership of 100 kd includes the member's services only (5 free orders monthly)</h5>
-                                        <p>
-                                            <ul>
-                                                <li>Transactions that do not require the presence of the client</li>
-                                                <li>Work/renewal/cancellation/transfer/establishment of servants and domestic workers of the person concerned</li>
-                                                <li>Transferring data from passport to another</li>
-                                                <li>Extracting/renewing driving license</li>
-                                                <li>Extracting/renewing car certificate</li>
-                                                <li>Extracting tourist/student visas</li>
-                                                <li>Hotel/travel tickets/restaurants/international sport matches bookings</li>
-                                                <li>car rental service</li>
-                                                <li>personal requests</li>
-                                                <li>Airport delivery</li>
-                                            </ul>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                        {
+                                            <h5>عضوية بقيمة 100 دينار تشمل خدمات صاحب العضوية فقط عدد 5 طلب مجاني شهريا </h5>
+                                            <p>
+                                                <ul>
+                                                    <li>المعاملات التي لا تتطلب حضور العميل صاحب المعاملة</li>
+                                                    <li>عمل/تجديد/إلغاء/تحويل/إقامة الخدم و العاملين لدى الأشخاص المعنيين</li>
+                                                    <li>نقل البيانات من جواز إلى جواز</li>
+                                                    <li>استخراج /تجديد رخص القيادة</li>
+                                                    <li>استخراج/تجديد دفتر السيارة</li>
+                                                    <li>استخراج الفيزا السياحبة/الدراسية</li>
+                                                    <li>حجوزات الفنادق –تذاكر سفر- مطاعم- مباريات عالمية</li>
+                                                    <li>خدمة تأجير السيارات</li>
+                                                    <li>طلبات شخصية</li>
+                                                    <li>توصيل من و إلى المطار</li>
+                                                </ul>
 
-                                        </p>
+                                            </p>
+                                        }
+                                        else
+                                        {
+                                            <h5>Membership of 100 kd includes the member's services only (5 free orders monthly)</h5>
+                                            <p>
+                                                <ul>
+                                                    <li>Transactions that do not require the presence of the client</li>
+                                                    <li>Work/renewal/cancellation/transfer/establishment of servants and domestic workers of the person concerned</li>
+                                                    <li>Transferring data from passport to another</li>
+                                                    <li>Extracting/renewing driving license</li>
+                                                    <li>Extracting/renewing car certificate</li>
+                                                    <li>Extracting tourist/student visas</li>
+                                                    <li>Hotel/travel tickets/restaurants/international sport matches bookings</li>
+                                                    <li>car rental service</li>
+                                                    <li>personal requests</li>
+                                                    <li>Airport delivery</li>
+                                                </ul>
+
+                                            </p>
+                                        }
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-light">Buy Classic Card</button>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                        {
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">خروج</button>
+                                            <button type="button" class="btn btn-light">شراء بطاقة الكلاسيك</button>
+                                        }
+                                        else
+                                        {
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-light">Buy Classic Card</button>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -246,33 +281,70 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <div class="modal-title" id="exampleModalLabel">
-                                            <h1>Prestige Card</h1>
+                                            @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                            {
+                                                <h1>برستيج</h1>
+                                            }
+                                            else
+                                            {
+                                                <h1>Prestige Card</h1>
+                                            }
                                         </div>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <h5>Membership of 200 kd includes the member's services only (10 free orders monthly)</h5>
-                                        <p>
-                                            <ul>
-                                                <li>Transactions that do not require the presence of the client</li>
-                                                <li>Work/renewal/cancellation/transfer/establishment of servants and domestic workers of the person concerned</li>
-                                                <li>Transferring data from passport to another</li>
-                                                <li>Extracting/renewing driving license</li>
-                                                <li>Extracting/renewing car certificate</li>
-                                                <li>Extracting tourist/student visas</li>
-                                                <li>Hotel/travel tickets/restaurants/international sport matches bookings</li>
-                                                <li>car rental service</li>
-                                                <li>personal requests</li>
-                                                <li>Airport delivery</li>
-                                            </ul>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                        {
+                                            <h5>عضوية بقيمة 200 د.ك تشمل خدمات صاحب العضوية فقط عدد 10 طلب مجاني شهريا </h5>
+                                            <p>
+                                                <ul>
+                                                    <li>المعاملات التي لا تتطلب حضور العميل صاحب المعاملة</li>
+                                                    <li>عمل/تجديد/إلغاء/تحويل/إقامة الخدم و العاملين لدى الأشخاص المعنيين</li>
+                                                    <li>نقل البيانات من جواز إلى جواز</li>
+                                                    <li>استخراج /تجديد رخص القيادة</li>
+                                                    <li>استخراج/تجديد دفتر السيارة</li>
+                                                    <li>استخراج الفيزا السياحبة/الدراسية</li>
+                                                    <li>حجوزات الفنادق –تذاكر سفر- مطاعم- مباريات عالمية</li>
+                                                    <li>خدمة تأجير السيارات</li>
+                                                    <li>طلبات شخصية</li>
+                                                    <li>توصيل من و إلى المطار</li>
+                                                </ul>
 
-                                        </p>
+                                            </p>
+                                        }
+                                        else
+                                        {
+                                            <h5>Membership of 200 kd includes the member's services only (10 free orders monthly)</h5>
+                                            <p>
+                                                <ul>
+                                                    <li>Transactions that do not require the presence of the client</li>
+                                                    <li>Work/renewal/cancellation/transfer/establishment of servants and domestic workers of the person concerned</li>
+                                                    <li>Transferring data from passport to another</li>
+                                                    <li>Extracting/renewing driving license</li>
+                                                    <li>Extracting/renewing car certificate</li>
+                                                    <li>Extracting tourist/student visas</li>
+                                                    <li>Hotel/travel tickets/restaurants/international sport matches bookings</li>
+                                                    <li>car rental service</li>
+                                                    <li>personal requests</li>
+                                                    <li>Airport delivery</li>
+                                                </ul>
+
+                                            </p>
+                                        }
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-light">Buy Prestige Card</button>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                        {
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">خروج</button>
+                                            <button type="button" class="btn btn-light">شراء بطاقة برستيج</button>
+                                        }
+                                        else
+                                        {
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-light">Buy Prestige Card</button>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -293,38 +365,79 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <div class="modal-title" id="exampleModalLabel">
-                                            <h1>Platinum Card</h1>
+                                            @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                            {
+                                                <h1>بلاتينيوم</h1>
+                                            }
+                                            else
+                                            {
+                                                <h1>Platinum Card</h1>
+                                            }
                                         </div>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <h5>Membership of 300 kd includes the member's and his wife services only only (15 orders monthly)</h5>
-                                        <p>
-                                            <ul>
-                                                <li>Transactions that do not require the presence of the client</li>
-                                                <li>Work/renewal/cancellation/transfer/establishment of servants and domestic workers of the person concerned</li>
-                                                <li>Transferring data from passport to another</li>
-                                                <li>Extracting/renewing driving license</li>
-                                                <li>Extracting/renewing car certificate</li>
-                                                <li>Extracting tourist/student visas</li>
-                                                <li>Hotel/travel tickets/restaurants/international sport matches bookings</li>
-                                                <li>Assistant service on the road (emergency)</li>
-                                                <li>Car rental service</li>
-                                                <li>Pay fees (school-electricity-traffic)</li>
-                                                <li>Personal requests</li>
-                                                <li>Airport delivery</li>
-                                                <li>Delivery service (flowers-gifts-invitations)</li>
-                                                <li>Exchange Eidiya service during Eid-al-Fitr and Eid-al-Adha</li>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                        {
+                                            <h5>عضوية بقيمة 300د.ك تشمل خدمات صاحب العضوية و زوجتة  عدد 15 طلب مجاني شهريا</h5>
+                                            <p>
+                                                <ul>
+                                                    <li>المعاملات التي لا تتطلب حضور العميل صاحب المعاملة</li>
+                                                    <li>عمل/تجديد/إلغاء/تحويل/إقامة الخدم و العاملين لدى الأشخاص المعنيين</li>
+                                                    <li>نقل البيانات من جواز إلى جواز</li>
+                                                    <li>استخراج /تجديد رخص القيادة</li>
+                                                    <li>استخراج/تجديد دفتر السيارة</li>
+                                                    <li>استخراج الفيزا السياحبة/الدراسية</li>
+                                                    <li>حجوزات الفنادق –تذاكر سفر- مطاعم- مباريات عالمية</li>
+                                                    <li>خدمة المساعد على الطريق (الطوارئ)</li>
+                                                    <li>خدمة تأجير السيارات</li>
+                                                    <li>دفع رسوم (المدارس-كهرباء-مرور...الخ)</li>
+                                                    <li>خدمة تنظيم الفعاليات و المناسبات (استقبال-افراح-مناسبات خاصة)</li>
+                                                    <li>طلبات شخصية</li>
+                                                    <li>توصيل من و إلى المطار</li>
+                                                    <li>خدمة توصيل(الزهور-الهدايا-الشوكولا-الدعوات)</li>
+                                                    <li>خدمة صرف العيادي بالأعياد</li>
 
-                                            </ul>
+                                                </ul>
+                                            </p>
+                                        }
+                                        else
+                                        {
+                                            <h5>Membership of 300 kd includes the member's and his wife services only only (15 orders monthly)</h5>
+                                            <p>
+                                                <ul>
+                                                    <li>Transactions that do not require the presence of the client</li>
+                                                    <li>Work/renewal/cancellation/transfer/establishment of servants and domestic workers of the person concerned</li>
+                                                    <li>Transferring data from passport to another</li>
+                                                    <li>Extracting/renewing driving license</li>
+                                                    <li>Extracting/renewing car certificate</li>
+                                                    <li>Extracting tourist/student visas</li>
+                                                    <li>Hotel/travel tickets/restaurants/international sport matches bookings</li>
+                                                    <li>Assistant service on the road (emergency)</li>
+                                                    <li>Car rental service</li>
+                                                    <li>Pay fees (school-electricity-traffic)</li>
+                                                    <li>Personal requests</li>
+                                                    <li>Airport delivery</li>
+                                                    <li>Delivery service (flowers-gifts-invitations)</li>
+                                                    <li>Exchange Eidiya service during Eid-al-Fitr and Eid-al-Adha</li>
 
-                                        </p>
+                                                </ul>
+                                            </p>
+                                        }
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-light">Buy Platinum Card</button>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                        {
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-light">شراء بطاقة بلاتينيوم</button>
+                                        }
+                                        else
+                                        {
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-light">Buy Platinum Card</button>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -341,36 +454,76 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <div class="modal-title" id="exampleModalLabel">
-                                            <h1>Premiere Card</h1>
+                                            @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                            {
+                                                <h1>بريمير</h1>
+                                            }
+                                            else
+                                            {
+                                                <h1>Premiere Card</h1>
+                                            }
                                         </div>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <h5>Membership of 850 kd includes the member's and his wife with their children under 18 years services (15 free orders monthly)</h5>
-                                        <p>
-                                            <ul style="color: #e1f4f5">
-                                                <li>Transactions that do not require the presence of the client</li>
-                                                <li>Work/renewal/cancellation/transfer/establishment of servants and domestic workers of the person concerned</li>
-                                                <li>Transferring data from passport to another</li>
-                                                <li>Extracting/renewing driving license</li>
-                                                <li>Extracting/renewing car certificate</li>
-                                                <li>Extracting tourist/student visas</li>
-                                                <li>Hotel/travel tickets/restaurants/international sport matches bookings</li>
-                                                <li>Assistant service on the road (emergency)</li>
-                                                <li>Car rental service</li>
-                                                <li>Pay fees (school-electricity-traffic)</li>
-                                                <li>Events planning service (Reception-weddings-special/private party)</li>
-                                                <li>Delivery service (flowers-gifts-invitations)</li>
-                                                <li>Any other requested service by the client is compatible with public services company policy and no contravention of Islamic law</li>
-                                            </ul>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                        {
+                                            <h5>عضوية بقيمة  850د.ك تشمل خدمات صاحب العضوية و زوجته و الأبناء دون سن 18 سنة عدد 20 طلب مجاني شهريا .</h5>
+                                            <p>
+                                                <ul>
+                                                    <li>المعاملات التي لا تتطلب حضور العميل صاحب المعاملة</li>
+                                                    <li>عمل/تجديد/إلغاء/تحويل/إقامة الخدم و العاملين لدى الأشخاص المعنيين</li>
+                                                    <li>نقل البيانات من جواز إلى جواز</li>
+                                                    <li>استخراج /تجديد رخص القيادة</li>
+                                                    <li>استخراج/تجديد دفتر السيارة</li>
+                                                    <li>استخراج الفيزا السياحبة/الدراسية</li>
+                                                    <li>حجوزات الفنادق –تذاكر سفر- مطاعم- مباريات عالمية</li>
+                                                    <li>خدمة المساعد على الطريق (الطوارئ)</li>
+                                                    <li>خدمة تأجير السيارات</li>
+                                                    <li>دفع رسوم (المدارس-كهرباء-مرور...الخ)</li>
+                                                    <li>خدمة تنظيم الفعاليات و المناسبات (استقبال-افراح-مناسبات خاصة)</li>
+                                                    <li>خدمة توصيل(الزهور-الهدايا-الشوكولا-الدعوات)</li>
+                                                    <li>أي خدمة أخرى قد يطلبها العميل تتوافق مع سياسة و ضوابط شركة الخدمات العامة و بما لا يخالف أحكام الشريعة الإسلام.</li>
+                                                </ul>
 
-                                        </p>
+                                            </p>
+                                        }
+                                        else
+                                        {
+                                            <h5>Membership of 850 kd includes the member's and his wife with their children under 18 years services (15 free orders monthly)</h5>
+                                            <p>
+                                                <ul style="color: #e1f4f5">
+                                                    <li>Transactions that do not require the presence of the client</li>
+                                                    <li>Work/renewal/cancellation/transfer/establishment of servants and domestic workers of the person concerned</li>
+                                                    <li>Transferring data from passport to another</li>
+                                                    <li>Extracting/renewing driving license</li>
+                                                    <li>Extracting/renewing car certificate</li>
+                                                    <li>Extracting tourist/student visas</li>
+                                                    <li>Hotel/travel tickets/restaurants/international sport matches bookings</li>
+                                                    <li>Assistant service on the road (emergency)</li>
+                                                    <li>Car rental service</li>
+                                                    <li>Pay fees (school-electricity-traffic)</li>
+                                                    <li>Events planning service (Reception-weddings-special/private party)</li>
+                                                    <li>Delivery service (flowers-gifts-invitations)</li>
+                                                    <li>Any other requested service by the client is compatible with public services company policy and no contravention of Islamic law</li>
+                                                </ul>
+
+                                            </p>
+                                        }
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-light">Buy Premiere Card</button>
+                                        @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                                        {
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-light">شراء بطاقة بريمير</button>
+                                        }
+                                        else
+                                        {
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-light">Buy Premiere Card</button>
+                                        }
                                     </div>
                                 </div>
                             </div>

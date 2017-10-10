@@ -215,7 +215,7 @@ header hr {
 .about_us .our_vision .eyes {
     width: 120%;
     position: relative;
-    left: -4.25rem;
+    left: 4.25rem;
     top: -1rem;
 }
 
@@ -227,7 +227,7 @@ header hr {
 
 .about_us .our_mission img {
     position: relative;
-    top: -2rem;
+    top: 2rem;
 }
 
 /*#endregion */
@@ -235,6 +235,10 @@ header hr {
 /*#endregion */
 
 /*#region Services */
+
+.modal-footer>:not(:last-child) {
+    margin-left: .25rem;
+}
 
 /*#region Services-Head-Content */
 
