@@ -118,6 +118,7 @@
     <Content Include="Contents\fonts\fontawesome-webfont.svg" />
     <Content Include="Contents\Images\altijari.png" />
     <Content Include="Contents\Images\Classic_Card_Website.png" />
+    <Content Include="Contents\Images\Classic_Card_Website2.png" />
     <Content Include="Contents\Images\CMGS.png" />
     <Content Include="Contents\Images\facebook-fb-icon.svg" />
     <Content Include="Contents\Images\facebook_logo_white_x50.png" />
@@ -129,7 +130,10 @@
     <Content Include="Contents\Images\googleplus-icon.png" />
     <Content Include="Contents\Images\header_background.jpg" />
     <Content Include="Contents\Images\instagram-icon.png" />
+    <Content Include="Contents\Images\KFH_logo.png" />
+    <Content Include="Contents\Images\LegalLogo.png" />
     <Content Include="Contents\Images\Mission_ar.png" />
+    <Content Include="Contents\Images\MOH_Logo.png" />
     <Content Include="Contents\Images\MOJ.png" />
     <Content Include="Contents\Images\Platinum_Card_Website.png" />
     <Content Include="Contents\Images\Premiere_Card_Website.png" />

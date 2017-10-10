@@ -94,12 +94,32 @@ else
                                 <li class="nav-item active">
                                     <a class="nav-link" href=@Url.Action("Index","Home")><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#about">@SiteResources.AboutUs</a></li>
-                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#services">@SiteResources.Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href=@Url.Action("ContactUs","Home")>@SiteResources.ContactUs</a></li>
+                                @*<li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#about">@SiteResources.AboutUs</a></li>*@
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @SiteResources.AboutUs
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#our_vision">@SiteResources.Our_Vision_Title</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#our_vision">@SiteResources.Our_Mission_Title</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#our_vision">@SiteResources.goals</a>
+                                    </div>
+                                </li>
+                                @*<li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#services">@SiteResources.Services</a></li>*@
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @SiteResources.Services
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#card">@SiteResources.Card_Title_First</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#card">@SiteResources.Card_Title_Second</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#services">@SiteResources.YemnakCards</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">@SiteResources.Media</a></li>
+                                <li class="nav-item"><a class="nav-link" href=@Url.Action("ContactUs","Home")>@SiteResources.ContactUs</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/home#clients">@SiteResources.Clients</a></li>
-                                <li class="nav-item"><a class="nav-link text-light" href="#">@SiteResources.MembershipRequest</a></li>
+                                @*<li class="nav-item"><a class="nav-link text-light" href="#">@SiteResources.MembershipRequest</a></li>*@
                             </ul>
                         </div>
                     </nav>

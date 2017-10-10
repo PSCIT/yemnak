@@ -114,11 +114,11 @@ header {
     padding: 0;
 }
 
-.nav-item:last-child {
+/*.nav-item:last-child {
     background-color: #09213e;
     margin-right: 1.25rem;
     padding-right: 0.625rem;
-}
+}*/
 
 .navbar .nav-item {
     padding-right: 1.25rem;
@@ -643,9 +643,9 @@ footer {
         background-color: transparent;
     }
 
-        .nav-item:last-child a {
+        /*.nav-item:last-child a {
             color: #2c3e50 !important;
-        }
+        }*/
     /*#endregion */
 
     /*#region Header-Content */
