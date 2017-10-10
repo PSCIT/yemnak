@@ -166,17 +166,24 @@ header hr {
 
 /****************************************** HomePage *******************************************/
 
-.letter {
-  display: inline-block;
-  padding:0.1rem;
-  font-family: 'Fredericka the Great', cursive;
-
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent; /* make scrollbar transparent */
 }
 
-#word{
-    font-size:3.5rem;
-    
-    font-weight:300;
+::-webkit-scrollbar-thumb {
+    background-color: #3A4A63;
+}
+
+.letter {
+    display: inline-block;
+    padding: 0.1rem;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+#word {
+    font-size: 3.5rem;
+    font-weight: 300;
 }
 
 /*#region Home-Page */
@@ -321,7 +328,6 @@ header hr {
 .classic .modal {
     background-image: linear-gradient(rgba(251, 180, 130,0.9), rgba(251, 180, 130,0.9)), url('../Images/Classic_Card_Website.png');
     background-size: cover;
-    overflow-y: hidden;
 }
 
     .classic .modal .modal-dialog .modal-content {
@@ -342,7 +348,6 @@ header hr {
 .Prestige .modal {
     background-image: linear-gradient(rgba(56, 54, 53,0.9), rgba(56, 54, 53,0.9)), url('../Images/prestige_Card_Website.png');
     background-size: cover;
-    overflow-y: hidden;
 }
 
     .Prestige .modal .modal-dialog .modal-content {
@@ -366,7 +371,6 @@ header hr {
 .Platinum .modal {
     background-image: linear-gradient(rgba(184, 187, 184,0.9), rgba(184, 187, 184,0.9)), url('../Images/Platinum_Card_Website.png');
     background-size: cover;
-    overflow-y: hidden;
 }
 
     .Platinum .modal .modal-dialog .modal-content {
@@ -390,7 +394,6 @@ header hr {
 .Premiere .modal {
     background-image: linear-gradient(rgba(83, 151, 154,0.9), rgba(83, 151, 154,0.9)), url('../Images/Premiere_Card_Website.png');
     background-size: cover;
-    overflow-y: hidden;
 }
 
     .Premiere .modal .modal-dialog .modal-content {
