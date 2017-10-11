@@ -4,16 +4,7 @@
 /*#region General-Declaration*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
-
-@font-face {
-    font-family: 'Al-Jazeera-Arabic-Light';
-    src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Al-Jazeera-Arabic-Regular';
-    src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Regular.ttf') format('truetype');
-}
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 
 html {
     overflow-x: hidden;
@@ -28,7 +19,7 @@ html {
 /*#region Genric-Classes */
 
 .fontArL {
-    font-family: 'Al-Jazeera-Arabic-Light';
+    font-family: 'Droid Arabic Kufi', serif;
 }
 
 .Primary-Text-Color {
@@ -43,7 +34,6 @@ html {
 ::-webkit-scrollbar-thumb {
     background-color: #3A4A63;
 }
-
 
 /*#endregion */
 

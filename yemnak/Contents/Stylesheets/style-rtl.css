@@ -1,18 +1,10 @@
 ﻿
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great'); /*for font-family of letter animation in membership card section*/
+
 /*#region General-Declaration*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
-
-@font-face {
-    font-family: 'Al-Jazeera-Arabic-Light';
-    src: url('/../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Al-Jazeera-Arabic-Regular';
-    src: url('/../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Regular.ttf') format('truetype');
-}
 
 html {
     overflow-x: hidden;
@@ -26,15 +18,26 @@ html {
 
 /*#region Genric-Classes */
 
-.fontArL {
-    font-family: 'Al-Jazeera-Arabic-Light';
+.fontEnL {
+    font-family: 'Roboto', sans-serif;
 }
 
 .Primary-Text-Color {
     color: #051f40;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3A4A63;
+}
+
 /*#endregion */
+
+/*************************************** Layout Header *****************************************/
 
 /*#region Top-Bar */
 
@@ -46,6 +49,7 @@ html {
     .topbar h6 {
         padding-top: 0.375rem;
         font-weight: 400;
+        font-family: 'Roboto', sans-serif;
     }
 
 .img-flag img {
@@ -68,6 +72,7 @@ html {
 .language {
     margin-left: 0 !important;
     margin-right: 10rem;
+    padding-top: 0.2rem;
 }
 
     .language a {
@@ -236,7 +241,7 @@ header hr {
 
 /*#region Services */
 
-.modal-footer>:not(:last-child) {
+.modal-footer > :not(:last-child) {
     margin-left: .25rem;
 }
 
@@ -334,8 +339,6 @@ header hr {
 
 /*#endregion */
 
-/***********************************************************************************************/
-
 /******************************************* Contact US *******************************************/
 
 /*#region Contact-US */
@@ -384,7 +387,7 @@ header hr {
 
 /*#endregion */
 
-/***********************************************************************************************/
+/**************************************** Media Queries *****************************************/
 
 /*#region Footer */
 
@@ -643,7 +646,7 @@ footer {
         background-color: transparent;
     }
 
-        /*.nav-item:last-child a {
+    /*.nav-item:last-child a {
             color: #2c3e50 !important;
         }*/
     /*#endregion */
