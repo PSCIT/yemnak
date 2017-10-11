@@ -150,7 +150,7 @@
 
 
 
-        <div class="membership_card">
+        <div id="membership_card" class="membership_card">
             <div class="row">
                 <div class="col-12">
                     <h1 class="text-center title">
@@ -349,10 +349,11 @@
                     </div>
                 </div>
             </div>
-            <br /><br />
+            <br />
+            <br />
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-10 mx-auto">
-                    <img class="img-fluid membershipcard_Image" src="~/Contents/Images/Platinum_Card_Website.png" data-toggle="modal" data-target="#Platinum_Card_Modal">
+                    <img class="img-fluid membershipcard_Image mmcard4" src="~/Contents/Images/Platinum_Card_Website.png" data-toggle="modal" data-target="#Platinum_Card_Modal">
 
                     <div class="Platinum">
                         <!-- Platinum Modal -->
@@ -442,7 +443,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-10 mx-auto">
-                    <img class="img-fluid membershipcard_Image" src="~/Contents/Images/Premiere_Card_Website.png" data-toggle="modal" data-target="#Premiere_Card_Modal">
+                    <img class="img-fluid membershipcard_Image mmcard3" src="~/Contents/Images/Premiere_Card_Website.png" data-toggle="modal" data-target="#Premiere_Card_Modal">
                     <div class="Premiere">
                         <!-- Premiere Modal -->
                         <div class="modal fade" id="Premiere_Card_Modal" tabindex="-1" role="dialog" aria-labelledby="Premiere_Card_Modal_Label" aria-hidden="true">
@@ -724,7 +725,7 @@
 
     };
 
-    var word = ["Prestige", "Classic", "Platinum", "Priemere", "Concierge"];
+    var word = ["Prestige", "Classic", "Platinum", "Priemere"];
     var nextWord = 1;
 
     var letters = new Letters();
