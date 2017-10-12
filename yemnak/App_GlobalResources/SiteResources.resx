@@ -142,13 +142,13 @@
     <value>YEMNAK is one of the services provided by Public Services Company. The service has been launched since 2003 and one of our first and current main clients are the General Secretariat of the Council of Ministers.</value>
   </data>
   <data name="Media" xml:space="preserve">
-    <value>Media</value>
+    <value>News</value>
   </data>
   <data name="MembershipRequest" xml:space="preserve">
     <value>Membership Request</value>
   </data>
   <data name="Services" xml:space="preserve">
-    <value>Services</value>
+    <value>Our Services</value>
   </data>
   <data name="AboutUs_Detail" xml:space="preserve">
     <value />
@@ -283,12 +283,18 @@
     <value>In Yemnak we believe that you deserve a Luxury Lifestyle, so our vision is to take the lead in Concierge Services worldwide.</value>
   </data>
   <data name="Our_Vision_Title" xml:space="preserve">
-    <value>OUR VISION</value>
+    <value>Our Vision</value>
   </data>
   <data name="Services_Subtitle" xml:space="preserve">
     <value>adapted to your needs</value>
   </data>
   <data name="Services_Title" xml:space="preserve">
     <value>Unmatched Services</value>
+  </data>
+  <data name="YemnakCards" xml:space="preserve">
+    <value>Yemnak Cards</value>
+  </data>
+  <data name="goals" xml:space="preserve">
+    <value>Our Goals</value>
   </data>
 </root>

@@ -448,6 +448,15 @@ namespace yemnak.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Our Goals.
+        /// </summary>
+        public static string goals {
+            get {
+                return ResourceManager.GetString("goals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DIVERSIFIED SERVICES.
         /// </summary>
         public static string Header_heading {
@@ -484,7 +493,7 @@ namespace yemnak.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Media.
+        ///   Looks up a localized string similar to News.
         /// </summary>
         public static string Media {
             get {
@@ -547,7 +556,7 @@ namespace yemnak.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to OUR VISION.
+        ///   Looks up a localized string similar to Our Vision.
         /// </summary>
         public static string Our_Vision_Title {
             get {
@@ -556,7 +565,7 @@ namespace yemnak.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Services.
+        ///   Looks up a localized string similar to Our Services.
         /// </summary>
         public static string Services {
             get {
@@ -579,6 +588,15 @@ namespace yemnak.App_GlobalResources {
         public static string Services_Title {
             get {
                 return ResourceManager.GetString("Services_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yemnak Cards.
+        /// </summary>
+        public static string YemnakCards {
+            get {
+                return ResourceManager.GetString("YemnakCards", resourceCulture);
             }
         }
     }

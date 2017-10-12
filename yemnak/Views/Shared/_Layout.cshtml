@@ -43,7 +43,7 @@ else
 
     @Styles.Render("~/Contents/Stylesheets/LocalStyles")
 
-    @Styles.Render("~/Contents/Stylesheets/style" + (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft ? "-rtl":"") + ".css")
+    @Styles.Render("~/Contents/Stylesheets/style" + (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft ? "-rtl" : "") + ".css")
 
 
 </head>
@@ -63,14 +63,18 @@ else
                 </div>
 
                 <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                    <h6>@SiteResources.ContactUs : 1824824  |  info@yemnak.com</h6>
+                    <h6 class="ArNum">@SiteResources.ContactUs : 1824824  |  info@yemnak.com</h6>
                 </div>
 
                 <div class="ml-sm-auto ml-2 language">
-                    @*<a class="text-light" href="#">English</a> | <a class="fontArL languageAr text-light" href="#">العربي</a>*@
-                    @Html.ActionLink("English", ViewContext.RouteData.Values["action"].ToString() + "/", ViewContext.RouteData.Values["controller"].ToString(), new { language = "en-US", @class = "text-light" }, null)
-                    |
-                    @Html.ActionLink("العربي", ViewContext.RouteData.Values["action"].ToString() + "/", ViewContext.RouteData.Values["controller"].ToString(), new { language = "ar-KW" }, new { @class = "fontArL languageAr text-light" })
+                    @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                    {
+                        @Html.ActionLink("English", ViewContext.RouteData.Values["action"].ToString() + "/", ViewContext.RouteData.Values["controller"].ToString(), new { language = "en-US" }, new { @class = "text-light fontEnL" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("العربي", ViewContext.RouteData.Values["action"].ToString() + "/", ViewContext.RouteData.Values["controller"].ToString(), new { language = "ar-KW" }, new { @class = "text-light fontArL" })
+                    }
                 </div>
             </div>
         </div>
@@ -94,12 +98,32 @@ else
                                 <li class="nav-item active">
                                     <a class="nav-link" href=@Url.Action("Index","Home")><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#about">@SiteResources.AboutUs</a></li>
-                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#services">@SiteResources.Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href=@Url.Action("ContactUs","Home")>@SiteResources.ContactUs</a></li>
+                                @*<li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#about">@SiteResources.AboutUs</a></li>*@
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @SiteResources.AboutUs
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#our_vision">@SiteResources.Our_Vision_Title</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#our_vision">@SiteResources.Our_Mission_Title</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#our_vision">@SiteResources.goals</a>
+                                    </div>
+                                </li>
+                                @*<li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#services">@SiteResources.Services</a></li>*@
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @SiteResources.Services
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#card">@SiteResources.Card_Title_First</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")#card">@SiteResources.Card_Title_Second</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")#membership_card">@SiteResources.YemnakCards</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">@SiteResources.Media</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/home#clients">@SiteResources.Clients</a></li>
-                                <li class="nav-item"><a class="nav-link text-light" href="#">@SiteResources.MembershipRequest</a></li>
+                                <li class="nav-item"><a class="nav-link" href=@Url.Action("ContactUs","Home")>@SiteResources.ContactUs</a></li>
+                                @*<li class="nav-item"><a class="nav-link" href="/home#clients">@SiteResources.Clients</a></li>*@
+                                @*<li class="nav-item"><a class="nav-link text-light" href="#">@SiteResources.MembershipRequest</a></li>*@
                             </ul>
                         </div>
                     </nav>
@@ -114,7 +138,7 @@ else
                         <h2 class="text-center">@SiteResources.Header_heading</h2>
                         <h1 class="text-center">@SiteResources.Header_Heading_2</h1>
                         <p class="text-center">
-                           @SiteResources.Home_Page_Header_Para
+                            @SiteResources.Home_Page_Header_Para
                         </p>
                     </div>
                 </div>
@@ -138,13 +162,13 @@ else
             <div class="row">
                 <div class="col-lg-4 col-md-5 col-sm-6 col-8 mx-auto">
                     <div class="row">
-                       
+
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/Yemnak_Logo.svg" /></div>
                         <div class="col-md-6 col-sm-6 col-6 text-center"><img class="img-fluid logo" src="~/Contents/Images/PSCLogo.svg" /></div>
                     </div>
-                   
+
                     <p class="text-justify text-light about_us">
                         @SiteResources.Footer_Aboutus
                     </p>
@@ -157,7 +181,15 @@ else
                     <div class="contact_details">
                         <div class="address">
                             <h2>@SiteResources.Address</h2>
-                            <p>Ministry Zone, Al-Shuhadaa Governance Area,  Beside NBK Bank Building, South Surra</p>
+                            @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                            {
+                                <p>منطقة الوزارات، منطقة الشهداء، أمام بنك الكويت الوطنى، جنوب السرة</p>
+                            }
+                            else
+                            {
+                                <p>Ministry Zone, Al-Shuhadaa Governance Area,  Beside NBK Bank Building, South Surra</p>
+                            }
+
                         </div>
 
                         <div class="contact">
@@ -209,24 +241,7 @@ else
             });
         </script>*@
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
-    <script>
-        var myCenter = new google.maps.LatLng(51.308742, -0.320850);
-        function initialize() {
-            var mapProp = {
-                center: myCenter,
-                zoom: 12,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("map"), mapProp);
 
-            var marker = new google.maps.Marker({
-                position: myCenter,
-            });
-            marker.setMap(map);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
 
 </body>
 </html>

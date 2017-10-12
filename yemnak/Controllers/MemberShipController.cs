@@ -37,7 +37,10 @@ namespace yemnak.Controllers
             return View();
         }
 
-
+        public ActionResult Premier()
+        {
+            return View();
+        }
 
     }
 }

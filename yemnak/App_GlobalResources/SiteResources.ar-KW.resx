@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutUs" xml:space="preserve">
-    <value>معلومات عنا</value>
+    <value>عن يمناك</value>
   </data>
   <data name="Address" xml:space="preserve">
     <value>عنوان</value>
   </data>
   <data name="Clients" xml:space="preserve">
-    <value>عملاء</value>
+    <value>عملائنا</value>
   </data>
   <data name="ContactUs" xml:space="preserve">
     <value>اتصل بنا</value>
@@ -142,7 +142,7 @@
     <value>يمناك هي واحدة من الخدمات التي تقدمها شركة الخدمات العامة. وقد تم إطلاق الخدمة منذ عام 2003، وأحد عملائنا الرئيسيين الأول والحالي هو الأمانة العامة لمجلس الوزراء.</value>
   </data>
   <data name="Media" xml:space="preserve">
-    <value>ميديا</value>
+    <value>المركز الإعلامى</value>
   </data>
   <data name="MembershipRequest" xml:space="preserve">
     <value>طلب العضوية</value>
@@ -154,7 +154,7 @@
     <value />
   </data>
   <data name="About_Yemnak_Para" xml:space="preserve">
-    <value>من الأهداف التي تم بناءها من قبل شركة الخدمات العامة، والتي هي لمساعدة المواطنين من جميع أنحاء الدولة المؤسسات الخاصة والعامة لتسهيل الإجراءات، ومن رؤية الشركة التي تتمثل في تقديم خدمات متفوقة، بنيت يماك الكونسيرج، منذ عام 2003. يمناك هو خدمة المقدمة لعملائنا النخبة والأفراد والشركات، للمساعدة في احتياجاتك ومساعدتك في المهام اليومية الخاصة بك في الخصوصية. سوف يمناك فريق تلبية احتياجاتك حيث أنها سوف يأخذك إلى رحلة فاخرة من حياتك. فريقنا على استعداد لخدمتك 24/7 من خلال فروعنا، في الكويت أو حتى دبي ولندن.</value>
+    <value>انطلاقا من الهدف الذي انشأة منه شركة الخدمات العامه لتسهيل إجراءات المواطنين في جميع مؤسسات الدولة الخاصة و العامة و انطلاقا من رؤية الشركة نحو تقديم أفضل الخدمات المبتكرة تم انشاء خدمة يمناك كونسيرج ( المساعد الشخصي ) سنة 2003 ، فهي خدمة نقدمها للعملاء النخبة سواء أفراد أو شركات لتلبية احتياجاتكم و الحصول على يد المساعده لإتمام مهامهم اليومية بجوده عالية و سرية تامة من خلال فريق عمل محترف من موظفينا نآخذكم في رحلة مميزة للتمتع بالرفاهية على مدار 24 ساعة يوميا من خلال كافة أفرعنا سواء داخل الكويت أو خارجها في دبي أو لندن .</value>
   </data>
   <data name="About_Yemnak_Subtitle" xml:space="preserve">
     <value>جار تقديم الخدمات إليك منذ عام 2003</value>
@@ -259,7 +259,7 @@
     <value>خدمات متنوعة</value>
   </data>
   <data name="Header_Heading_2" xml:space="preserve">
-    <value>متقن الجودة</value>
+    <value>متقنة الجودة</value>
   </data>
   <data name="Home_Page_Header_Para" xml:space="preserve">
     <value>خدمة يمناك كونسيرج التي تحقق لعملائها كل ما يحتاجونه من خدمات مميزة مثل خدمة إنجاز المعاملات الحكومية بالكويت و أيضا التوصيل من و الى المطار , هذا و تحقق يمناك أعلى مستوى من الرفاهية لكبار الشخصيات</value>
@@ -274,13 +274,13 @@
     <value>طلب العضوية</value>
   </data>
   <data name="Our_Mission_Detail" xml:space="preserve">
-    <value>: بما أن رفاهيتك أهم أولوياتنا فإن مهمتنا تكمن في تقديم أفضل الخدمات , إرضائكم مبتغانا , فنحن نوفر مناخ مناسب يلبي إحتياجاتك على مدار الساعة بسرعة و بإتقان تزامنا مع الوفاء لعملاء يمناك .</value>
+    <value>توفير كل الامكانيات الممكنه في قطاع الكونسيرج ( المساعد الشخصي ) لتقديم أفضل الخدمات لعملائنا بكل احترافية .</value>
   </data>
   <data name="Our_Mission_Title" xml:space="preserve">
-    <value>رسالتنا</value>
+    <value>مهمتنا</value>
   </data>
   <data name="Our_Vision_Detail" xml:space="preserve">
-    <value>نحن في يمناك نؤمن بأنكم تستحقون الرفاهية , فإننا نطمح بأن نكون الرائد الأول في مجال المساعد الشخصي</value>
+    <value>لأننا في يمناك نؤمن بأنكم تستحقون الرفاهية فأننا نطمح بان نكون الشركة الرائدة محليا و دوليا في تقديم خدمات الكونسيرج ( المساعد الشخصي ) على أعلى مستوى من الجودة و الرعاية .</value>
   </data>
   <data name="Our_Vision_Title" xml:space="preserve">
     <value>رؤيتنا</value>
@@ -290,5 +290,11 @@
   </data>
   <data name="Services_Title" xml:space="preserve">
     <value>خدمات لا مثيل لها</value>
+  </data>
+  <data name="YemnakCards" xml:space="preserve">
+    <value>بطاقات يمناك</value>
+  </data>
+  <data name="goals" xml:space="preserve">
+    <value>أهدافنا</value>
   </data>
 </root>
