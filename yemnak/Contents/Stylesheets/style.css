@@ -1,9 +1,9 @@
 ﻿
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great'); /*for font-family of letter animation in membership card section*/ 
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great'); /*for font-family of letter animation in membership card section*/
 
 /*#region General-Declaration*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 
 html {
@@ -124,10 +124,6 @@ nav ul {
         font-size: 1.5625rem; /*25px*/
     }
 
-
-
-
-
 .dropdown-menu .sub-menu {
     left: 100%;
     position: absolute;
@@ -135,14 +131,6 @@ nav ul {
     visibility: hidden;
     margin-top: -1px;
 }
-
-/*.dropdown-menu li:hover .sub-menu {
-    visibility: visible;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}*/
 
 .nav-tabs .dropdown-menu,
 .nav-pills .dropdown-menu,
@@ -169,6 +157,13 @@ nav ul {
     left: -6px;
 }
 
+.dropdown-item {
+    padding: .25rem 1.2rem;
+    font-weight: 300;
+    color: #2f4f4f;
+    font-size: 1.53rem;
+}
+
 .dropdown-toggle::after {
     margin-left: .050em;
     vertical-align: .155em;
@@ -189,7 +184,7 @@ header hr {
 .header-content h2 {
     font-size: 4.063rem; /*65px*/
     font-weight: 300;
-    margin-top: 3.0625rem; /*49px*/
+    margin-top: 1.5rem;
 }
 
 .header-content h1 {
@@ -199,8 +194,9 @@ header hr {
 
 .header-content p {
     font-weight: 400;
-    font-size: 1.5625rem; /*25px*/
-    padding: 0 2.375rem; /*0 38px*/
+    font-size: 1.61rem;
+    padding: 0 2.375rem;
+    line-height: 2.6rem;
 }
 
 .header-content .btn {
