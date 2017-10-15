@@ -1,17 +1,20 @@
 ﻿
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great'); /*for font-family of letter animation in membership card section*/
-@font-face {
-    font-family: 'Al-Jazeera-Arabic-Light';
-    src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Light.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Al-Jazeera-Arabic-Regular';
-    src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Regular.ttf') format('truetype');
-}
+
 /*#region General-Declaration*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+@font-face {
+    font-family: 'Al-Jazeera-Arabic-Light';
+    src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Al-Jazeera-Arabic-Regular';
+    src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Regular.ttf') format('truetype');
+}
 
 html {
     overflow-x: hidden;
@@ -177,7 +180,7 @@ nav ul {
 
 .dropdown-menu {
     right: 0 !important;
-    left:auto
+    left: auto;
 }
 
 .dropdown-item {
@@ -264,26 +267,27 @@ header hr {
 
 .about_us .our_vision h1 {
     font-weight: 300;
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 .about_us .our_vision p {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     line-height: 3.125rem;
     font-weight: 300;
 }
 
 .about_us .our_vision .eyes {
-    width: 120%;
+    width: 115%;
     position: relative;
     left: 4.25rem;
-    top: -1rem;
+    top: 2.6rem;
 }
 
 .about_us .our_mission p {
-    font-size: 2.6rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    line-height: 4.5rem;
     font-weight: 300;
+    margin-top: 3rem;
 }
 
 .about_us .our_mission img {
@@ -312,12 +316,13 @@ header hr {
     .services h1 {
         font-weight: 700;
         font-size: 5.438rem;
-        margin-top: 4rem;
+        margin-top: 4.5rem;
     }
 
     .services h2 {
         font-weight: 100;
         font-size: 3.125rem;
+        margin-top: 1.6rem;
     }
 
 /*#endregion */
@@ -476,6 +481,10 @@ footer {
         font-weight: 300;
     }
 
+    footer .contact_details .contact p {
+        font-family: 'Roboto', sans-serif;
+    }
+
     footer .contact_details .contact h2 {
         margin-top: 1.75rem;
     }
@@ -554,7 +563,6 @@ footer {
 
     /*#endregion */
 
-
     /******************************************* HomePage *******************************************/
 
     /*#region Home-Page */
@@ -582,8 +590,9 @@ footer {
     }
 
     .about_us .our_vision .eyes {
-        left: -3.25rem;
-        top: 0.5rem;
+        left: 5.25rem;
+        top: 4.5rem;
+        width: 130%;
     }
 
     .about_us .our_mission p {
@@ -592,7 +601,7 @@ footer {
     }
 
     .about_us .our_mission img {
-        top: 0;
+        top: 3rem;
     }
 
     /*#endregion */
@@ -603,12 +612,12 @@ footer {
 
     /*#region Services-Head-Content */
     .services h1 {
-        font-size: 4.438rem;
-        margin-top: 2rem;
+        font-size: 4.5rem;
+        margin-top: 3.8rem;
     }
 
     .services h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     /*#endregion */
@@ -788,6 +797,10 @@ footer {
 
     /*#endregion */
 
+    .services_Section2 .membership_card h1 {
+        font-size: 3rem;
+    }
+
     /*#region Cards */
 
     .services_Section2 .card:first-child {
@@ -961,7 +974,7 @@ footer {
     /*#region Membership-Cards */
 
     .services_Section2 .membership_card h1 {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 
     .services_Section2 .membership_card h2 {
