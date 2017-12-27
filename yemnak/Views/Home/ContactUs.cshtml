@@ -5,7 +5,7 @@
     ViewBag.Title = "Contact Us";
 }
 
-<style>
+    <style>
     body{
         background-image:url('/../Contents/Images/header_background.jpg') !important;
         background-size:100%;
@@ -42,7 +42,11 @@
 
 
 
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+@*<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>*@
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhDMxo8ChA9Ew7sqzhO9qfIjsg8lnfSS0&callback=initMap" async defer></script>
+
+
 <script>
         var myCenter = new google.maps.LatLng(51.308742, -0.320850);
         function initialize() {
