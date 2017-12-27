@@ -5,11 +5,12 @@
     ViewBag.Title = "Contact Us";
 }
 
-    <style>
-    body{
-        background-image:url('/../Contents/Images/header_background.jpg') !important;
-        background-size:100%;
+<style>
+    body {
+        background-image: url('/../Contents/Images/header_background.jpg') !important;
+        background-size: 100%;
     }
+
     .header-content {
         display: none;
     }
@@ -41,26 +42,27 @@
 <br /><br />
 
 
-
-@*<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>*@
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhDMxo8ChA9Ew7sqzhO9qfIjsg8lnfSS0&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Zt5o8EgHPWVa2JNCtCOQe1-5BFj438Q"></script>
 
 
 <script>
-        var myCenter = new google.maps.LatLng(51.308742, -0.320850);
-        function initialize() {
-            var mapProp = {
-                center: myCenter,
-                zoom: 12,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("map"), mapProp);
+    var myCenter = new google.maps.LatLng(29.2729674, 48.0165458);
+    function initialize() {
 
-            var marker = new google.maps.Marker({
-                position: myCenter,
-            });
-            marker.setMap(map);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
+        var mapProp = {
+            center: myCenter,
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+        var marker = new google.maps.Marker({
+            map: map,
+            draggable: true,
+            animation: google.maps.Animation.BOUNCE,
+            position: { lat: 29.2729674, lng: 48.0165458 }
+        });
+        marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
 </script>
