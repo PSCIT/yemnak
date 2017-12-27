@@ -13,7 +13,7 @@ namespace yemnak
             routes.MapRoute(
                 name: "Default",
                 url: "{language}/{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional, language = "en-US" }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional, language = "ar-KW" }
             );
         }
     }

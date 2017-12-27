@@ -1,4 +1,4 @@
-﻿
+﻿@using System.Globalization;
 @using yemnak.App_GlobalResources;
 
 @{
@@ -27,12 +27,27 @@
                 <div id="map"></div>
                 <div class="map-c">
                     <h2>@SiteResources.ContactUS_Title</h2>
-                    <p>
-                        Ministry Zone, Al-Shuhadaa Governance Area, Beside NBK Bank Building, South Surra
-                    </p>
+                    @if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft == true)
+                    {
+                        <p>
+                            منطقة الوزارة،
+                            منطقة الشهداء الحكومية،
+                            بجوار مبنى البنك الوطني،
+                            جنوب السرة
+                        </p>
+                    }
+                    else
+                    {
+                        <p>
+                            Ministry Zone,
+                            Al-Shuhadaa Governance Area,
+                            Beside NBK Bank Building,
+                            South Surra
+                        </p>
+                    }
                     <div class="det"><i class="fa fa-map-marker"></i> <a target="_blank" class="google_link" href="https://goo.gl/maps/wHGrNSWV5sx">@SiteResources.ContactUs_googlelink</a></div>
-                    <div class="det"><i class="fa fa-phone"></i> 22252111</div>
-                    <div class="det"><i class="fa fa-globe"></i> <a target="_blank" href="http://www.yemnak.com/">www.yemnak.com</a> </div>
+                    <div class="det"><i class="fa fa-phone"></i> <span style="font-family: 'Roboto', sans-serif;">22252111</span></div>
+                    <div class="det"><i class="fa fa-globe"></i> <a target="_blank" style="font-family: 'Roboto', sans-serif;" href="http://www.yemnak.com/">www.yemnak.com</a> </div>
                 </div>
             </div>
         </div>
